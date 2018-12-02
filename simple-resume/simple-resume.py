@@ -82,6 +82,7 @@ if __name__ == '__main__':
 
         ########
 # TODO: Learn how to deal with environments
+
     # Define the new environment using the style definition above
     new_env = UnsafeCommand('newenvironment', 'resumeEnvironment', options=2,
                             extra_arguments=[
@@ -90,9 +91,8 @@ if __name__ == '__main__':
     doc.append(new_env)
 
     # Usage of the newly created environment
-    with doc.create(
-            ResumeEnvironment(arguments=Arguments('red', 3))) as environment:
-        environment.append('\nThis is the actual content\n')
+    with doc.create(ResumeEnvironment(arguments=Arguments('red', 3))) as environment:
+        environment.append('This is the actual content\n')
 
         ########
 
