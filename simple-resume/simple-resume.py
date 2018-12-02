@@ -99,6 +99,11 @@ class PersonalEntry(CommandBase):
     This class represents a custom LaTeX command named
     ``exampleCommand``.
     """
+# \newcommand{\PersonalEntry}[2]{
+# 		\noindent\hangindent=2em\hangafter=0 % Indentation
+# 		\parbox{\spacebox}{        % Box to align text
+# 		\textit{#1}}		       % Entry name (birth, address, etc.)
+# 		\hspace{1.5em} #2 \par}    % Entry value
 
     _latex_name = 'PersonalEntry'
 #    packages = [Package('graphicx')]
@@ -176,14 +181,15 @@ def fill_document(doc):
 
 if __name__ == '__main__':
     # Basic document
-    doc = Document(documentclass = 'scrartcl' , document_options = ["paper=a4","fontsize=11pt"])
-    fill_document(doc)
+    #doc = Document('simple')
+    #fill_document(doc)
 
 #    doc.generate_pdf(clean_tex=False)
 #   doc.generate_tex()
 
     # Document with `\maketitle` command activated
-    doc = Document()
+    #doc = Document()
+    doc = Document(documentclass = 'scrartcl' , document_options = ["paper=a4","fontsize=11pt"])
 
     doc.preamble.append(Command('title', 'Resumee'))
     doc.preamble.append(Command('author', 'Abhinav Sharma'))
@@ -226,10 +232,25 @@ if __name__ == '__main__':
 
 
 
-    new_part = UnsafeCommand('newcommand', r'\NewPart', options=1,
+    NewPart = UnsafeCommand('newcommand', r'\NewPart', options=1,
                              extra_arguments=r'\section*{\uppercase{#1}}')
-    doc.append(new_part)
+    doc.append(NewPart)
 
+# \newcommand{\PersonalEntry}[2]{
+# 		\noindent\hangindent=2em\hangafter=0 % Indentation
+# 		\parbox{\spacebox}{        % Box to align text
+# 		\textit{#1}}		       % Entry name (birth, address, etc.)
+# 		\hspace{1.5em} #2 \par}    % Entry value
+
+
+    PersonalEntry = UnsafeCommand('newcommand', r'\PersonalEntry', options=2,
+                             extra_arguments=r"""
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value""")
+
+    doc.append(PersonalEntry)
 
 
     # # Use our newly created command with different arguments

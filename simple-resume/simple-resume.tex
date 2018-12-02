@@ -1,4 +1,4 @@
-\documentclass{article}%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}%
 \usepackage[T1]{fontenc}%
 \usepackage[utf8]{inputenc}%
 \usepackage{lmodern}%
@@ -36,6 +36,11 @@ Also some crazy characters: \$\&\#\{\}
 \newcommand{\MyName}[1]{\Huge\usefont{OT1}{phv}{b}{n}\hfill{#1}\par\normalsize\normalfont}%
 \newcommand{\MySlogan}[1]{\large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont}%
 \newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}%
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value}%
 \section{Experience}%
 \label{sec:Experience}%
 Some text.
