@@ -64,18 +64,6 @@ if __name__ == '__main__':
     doc = Document(documentclass = 'scrartcl' , document_options = ["paper=a4","fontsize=11pt"])
 
 
-    doc.preamble.append(Command('title', 'Resumee'))
-    doc.preamble.append(Command('author', 'Abhinav Sharma'))
-    doc.preamble.append(Command('date', NoEscape(r'\today')))
-    doc.append(NoEscape(r'\maketitle'))
-
-    with doc.create(Section('Experience')):
-        doc.append('Cyber Indian App Stores Pvt. Ltd.')
-        doc.append(italic('Chief Technology Officer'))
-
-        with doc.create(Subsection('Fourtek (IT) Solutions Pvt. Ltd.')):
-            doc.append('Software Engineer AI/ML')
-
 ###########################
 
 ###########################
@@ -128,6 +116,7 @@ if __name__ == '__main__':
     doc.append(MyName)
 
 
+
 #    doc.append(MyName(arguments=Arguments("Abhinav Sharma")))
 
 
@@ -148,12 +137,24 @@ if __name__ == '__main__':
     doc.append(MySlogan)
 
 
+###########################
+
+###########################
+
+
+
     NewPart = UnsafeCommand('newcommand', r'\NewPart', options=1,
                              extra_arguments=r"""
                              \section*{\uppercase{#1}}
 """)
 
     doc.append(NewPart)
+
+
+###########################
+
+###########################
+
 
 
     PersonalEntry = UnsafeCommand('newcommand', r'\PersonalEntry', options=2,
@@ -167,6 +168,12 @@ if __name__ == '__main__':
     doc.append(PersonalEntry)
 
 
+###########################
+
+###########################
+
+
+
     SkillsEntry = UnsafeCommand('newcommand', r'\SkillsEntry', options=2,
                              extra_arguments=r"""
 
@@ -177,6 +184,12 @@ if __name__ == '__main__':
 """)
 
     doc.append(SkillsEntry)
+
+###########################
+
+###########################
+
+
 
     EducationEntry = UnsafeCommand('newcommand', r'\EducationEntry', options=2,
                              extra_arguments=r"""
@@ -192,6 +205,12 @@ if __name__ == '__main__':
     doc.append(EducationEntry)
 
 
+###########################
+
+###########################
+
+
+
     WorkEntry = UnsafeCommand('newcommand', r'\WorkEntry', options=2,
                              extra_arguments=r"""
          % Same as \EducationEntry
@@ -205,6 +224,15 @@ if __name__ == '__main__':
     doc.append(WorkEntry)
 
 
+
+###########################
+
+###########################
+
+
+
+
+    doc.append(Command('MyName', 'Abhinav Sharma'))
 
 
     # Add stuff to the document

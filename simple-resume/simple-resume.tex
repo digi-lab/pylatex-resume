@@ -4,6 +4,17 @@
 \usepackage{lmodern}%
 \usepackage{textcomp}%
 \usepackage{lastpage}%
+\usepackage{mdframed}%
+\usepackage[english]{babel}%
+\usepackage[protrusion=true,expansion=true]{microtype}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amsthm}%
+\usepackage{graphicx}%
+\usepackage[svgnames]{xcolor}%
+\usepackage{geometry}%
+\usepackage{url}%
+\usepackage{sectsty}%
 %
 \title{Resumee}%
 \author{Abhinav Sharma}%
@@ -12,15 +23,11 @@
 \begin{document}%
 \normalsize%
 \maketitle%
-\section{Experience}%
-\label{sec:Experience}%
-Cyber Indian App Stores Pvt. Ltd.%
-\textit{Chief Technology Officer}%
-\subsection{Fourtek (IT) Solutions Pvt. Ltd.}%
-\label{subsec:Fourtek (IT) Solutions Pvt. Ltd.}%
-Software Engineer AI/ML
-
+\newenvironment{resumeEnvironment}[2]{\begin{mdframed}[style=my_style]}{\end{mdframed}}%
+\begin{resumeEnvironment}{red}{3}%
+This is the actual content\newline%
 %
+\end{resumeEnvironment}%
 \newcommand{\sepspace}{
                              \vspace*{1em}
 }%
@@ -65,6 +72,16 @@ Software Engineer AI/ML
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par
  }%
+\section{Experience}%
+\label{sec:Experience}%
+Cyber Indian App Stores Pvt. Ltd.%
+\textit{Chief Technology Officer}%
+\subsection{Fourtek (IT) Solutions Pvt. Ltd.}%
+\label{subsec:Fourtek (IT) Solutions Pvt. Ltd.}%
+Software Engineer AI/ML
+
+%
+\MyName{Abhinav Sharma}%
 \section{Experience}%
 \label{sec:Experience}%
 Some text.
