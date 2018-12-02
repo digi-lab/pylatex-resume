@@ -89,16 +89,23 @@ if __name__ == '__main__':
 #\textheight=700px
     doc.append(Command("textheight=700px"))
 
-# \sectionfont{%			            % Change font of \section command
-# 	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-# 	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+    # doc.append(Command("sectionfont", [
+    #     Command("usefont",["OT1","phv","b","n"]),
+    #     Command("sectionrule",["0pt","0pt",NoEscape("-5pt"),"3pt"])]))
 
-    doc.append(Command("sectionfont", [Command("usefont",["OT1","phv","b","n"]), Command("sectionrule",["0pt","0pt","-5pt","3pt"])]))
+    doc.append(Command("sectionfont", NoEscape(r""" \usefont{OT1}{phv}{b}{n} \sectionrule{0pt}{0pt}{-5pt}{3pt}}""")))
+
+
+    # doc.append(Command("sectionfont", [
+    #     Command("usefont",["OT1","phv","b","n"]),
+    #     NoEscape(Command("sectionrule",["0pt","0pt",NoEscape("-5pt"),"3pt"]))]))
+
+
 
 
     doc.append(Command("newlength",Command("spacebox")))
 
-    doc.append(Command("newlength",[Command("spacebox"), "8888888888"]))
+    doc.append(Command("settowidth",[Command("spacebox"), "8888888888"]))
 
 # \newlength{\spacebox}
 # \settowidth{\spacebox}{8888888888}
@@ -213,7 +220,7 @@ if __name__ == '__main__':
 
 
 
-    EducationEntry = UnsafeCommand('newcommand', r'\EducationEntry', options=2,
+    EducationEntry = UnsafeCommand('newcommand', r'\EducationEntry', options=4,
                              extra_arguments=r"""
         \noindent \textbf{#1} \hfill      % Study
         \colorbox{Black}{%
@@ -233,7 +240,7 @@ if __name__ == '__main__':
 
 
 
-    WorkEntry = UnsafeCommand('newcommand', r'\WorkEntry', options=2,
+    WorkEntry = UnsafeCommand('newcommand', r'\WorkEntry', options=4,
                              extra_arguments=r"""
          % Same as \EducationEntry
         \noindent \textbf{#1} \hfill      % Jobname
@@ -255,15 +262,34 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command('NewPart', "Personal details"))
+    doc.append(Command('NewPart', ["Personal details", NoEscape("")]))
 
     doc.append(Command('PersonalEntry', ["Birth", "January 1, 1980"]))
 
     doc.append(Command('PersonalEntry' , ["Address", "111 First St, New York"]))
 
     doc.append(Command('PersonalEntry', ["Phone", "(123) 000-0000"]))
+
+
+
+    doc.append(Command('NewPart', ["Education details", NoEscape("")]))
+
 #TODO
    # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
+
+# \NewPart{Education}{}
+
+# \EducationEntry{MSc. Name of Education}{2010-2012}{Name of
+#   University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
+# \sepspace
+
+# \EducationEntry{BSc. Name of Education}{2007-2010}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
+
+
+    doc.append(Command("EducationEntry",["MSc. Name of Education", NoEscape("2010-2012"), "Name of University", """Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section."""]))
+
+    doc.append(Command('sepspace'))
+
 
 
 

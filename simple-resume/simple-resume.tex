@@ -22,9 +22,9 @@
 \frenchspacing%
 \pagestyle{empty}%
 \textheight=700px%
-\sectionfont{\usefont{OT1}{phv}{b}{n}}{\sectionrule{0pt}{0pt}{{-}5pt}{3pt}}%
+\sectionfont{ \usefont{OT1}{phv}{b}{n} \sectionrule{0pt}{0pt}{-5pt}{3pt}}}%
 \newlength{\spacebox}%
-\newlength{\spacebox}{8888888888}%
+\settowidth{\spacebox}{8888888888}%
 \newcommand{\sepspace}{
                              \vspace*{1em}
 }%
@@ -52,7 +52,7 @@
         \textit{#1}}			   % Entry name (birth, address, etc.)
         \hspace{1.5em} #2 \par    % Entry value
 }%
-\newcommand{\EducationEntry}[2]{
+\newcommand{\EducationEntry}[4]{
         \noindent \textbf{#1} \hfill      % Study
         \colorbox{Black}{%
             \parbox{6em}{%
@@ -61,7 +61,7 @@
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
         \normalsize \par
  }%
-\newcommand{\WorkEntry}[2]{
+\newcommand{\WorkEntry}[4]{
          % Same as \EducationEntry
         \noindent \textbf{#1} \hfill      % Jobname
         \colorbox{Black}{\color{White}#2} \par  % Duration
@@ -71,8 +71,11 @@
  }%
 \MySlogan{Curriculum Vitae}%
 \sepspace%
-\NewPart{Personal details}%
+\NewPart{Personal details}{}%
 \PersonalEntry{Birth}{January 1, 1980}%
 \PersonalEntry{Address}{111 First St, New York}%
 \PersonalEntry{Phone}{(123) 000{-}0000}%
+\NewPart{Education details}{}%
+\EducationEntry{MSc. Name of Education}{2010-2012}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}%
+\sepspace%
 \end{document}
