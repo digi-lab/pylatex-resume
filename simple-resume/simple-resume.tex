@@ -22,6 +22,50 @@
 %
 \begin{document}%
 \normalsize%
+\newcommand{\sepspace}[0]{
+                             \vspace*{1em}
+}%
+\newcommand{\MyName}[1]{
+    		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+     		\par \normalsize \normalfont
+}%
+\newcommand{\MySlogan}[1]{
+  		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont
+}%
+\newcommand{\NewPart}[1]{
+                             \section*{\uppercase{#1}}
+}%
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+ }%
+\newcommand{\SkillsEntry}[2]{
+
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par    % Entry value
+}%
+\newcommand{\EducationEntry}[2]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par
+ }%
+\newcommand{\WorkEntry}[2]{
+         % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par
+ }%
 \maketitle%
 \section{Experience}%
 \label{sec:Experience}%
@@ -32,55 +76,6 @@ Cyber Indian App Stores Pvt. Ltd.%
 Software Engineer AI/ML
 
 %
-\newcommand{\sepspace}[0]{
-                             \vspace*{1em}
-
-}%
-\newcommand{\MyName}[1]{
-    		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-     		\par \normalsize \normalfont
-
-}%
-\newcommand{\MySlogan}[1]{
-  		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont
-
-
-}%
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}%
-\newcommand{\PersonalEntry}[2]{
-        \noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
-
- }%
-\newcommand{\SkillsEntry}[2]{
-
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par    % Entry value
-
-}%
-\newcommand{\EducationEntry}[2]{
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par
-
- }%
-\newcommand{\WorkEntry}[2]{
-         % Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
-		\noindent \textit{#3} \par              % Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par
- }%
 \section{Experience}%
 \label{sec:Experience}%
 Some text.
