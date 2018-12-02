@@ -296,6 +296,10 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
+    doc.append(Command("WorkEntry",[NoEscape("Software Engineer - Machine Learning"), NoEscape("August 2016 - July 2017"), "Fourtek (IT) Solutions Pvt. Ltd.", """I worked as a co-founder of a product targeting the StartUp ecosystem."""]))
+
+    doc.append(Command('sepspace'))
+
 
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
