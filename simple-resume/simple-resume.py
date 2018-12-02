@@ -4,27 +4,27 @@ from pylatex import Document, Section, Subsection, Command, UnsafeCommand
 from pylatex.utils import NoEscape, italic
 
 
-class ResumeEnvironment(Environment):
-    """
-    A class representing a custom LaTeX environment.
-    This class represents a custom LaTeX environment named
-    ``resumeEnvironment``.
-    """
+# class ResumeEnvironment(Environment):
+#     """
+#     A class representing a custom LaTeX environment.
+#     This class represents a custom LaTeX environment named
+#     ``resumeEnvironment``.
+#     """
 
-    _latex_name = 'resumeEnvironment'
-    packages = [
-                Package('mdframed'),
-                Package('babel', options="english"),
-                #Package('inputenc'), #Already added by pylatex
-                Package('microtype', options ="protrusion=true,expansion=true"),
-                Package('amsmath'),
-                Package('amsfonts'),
-                Package('amsthm'),
-                Package('graphicx'),
-                Package('xcolor', options="svgnames"),
-                Package('geometry'),
-                Package('url'),
-                Package('sectsty')]
+#     _latex_name = 'resumeEnvironment'
+#     packages = [
+#                 Package('mdframed'),
+#                 Package('babel', options="english"),
+#                 #Package('inputenc'), #Already added by pylatex
+#                 Package('microtype', options ="protrusion=true,expansion=true"),
+#                 Package('amsmath'),
+#                 Package('amsfonts'),
+#                 Package('amsthm'),
+#                 Package('graphicx'),
+#                 Package('xcolor', options="svgnames"),
+#                 Package('geometry'),
+#                 Package('url'),
+#                 Package('sectsty')]
 
 
 
@@ -69,18 +69,40 @@ if __name__ == '__main__':
 ###########################
 
 
-# TODO: Learn how to deal with environments
 
-    # Define the new environment using the style definition above
-    new_env = UnsafeCommand('newenvironment', 'resumeEnvironment', options=2,
-                            extra_arguments=[
-                                r"""\begin{mdframed}[style=my_style]""",
-                                r"""\end{mdframed}"""])
-    doc.append(new_env)
+    doc.preamble.append(Command("usepackage", "mdframed"))
+    doc.preamble.append(Command("usepackage", "babel","english"))
+#    doc.preamble.append(Command("usepackage", "inputenc","utf8x"))
+    doc.preamble.append(Command("usepackage","microtype", ["protrusion=true" , "expansion=true"]))
+    doc.preamble.append(Command("usepackage", "amsmath"))
+    doc.preamble.append(Command("usepackage", "amsfonts"))
+    doc.preamble.append(Command("usepackage", "amsthm"))
+    doc.preamble.append(Command("usepackage", "graphicx"))
+    doc.preamble.append(Command("usepackage", "xcolor", "svgnames"))
+    doc.preamble.append(Command("usepackage", "geometry"))
+    doc.preamble.append(Command("usepackage", "url"))
+    doc.preamble.append(Command("usepackage", "sectsty"))
 
-    # Usage of the newly created environment
-    with doc.create(ResumeEnvironment(arguments=Arguments('red', 3))) as environment:
-        environment.append('This is the actual content\n')
+
+    doc.append(Command('frenchspacing'))
+    doc.append(Command('pagestyle', 'empty'))
+#\textheight=700px
+    doc.append(Command("textheight=700px"))
+
+# \sectionfont{%			            % Change font of \section command
+# 	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+# 	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+    doc.append(Command("sectionfont", [Command("usefont",["OT1","phv","b","n"]), Command("sectionrule",["0pt","0pt","-5pt","3pt"])]))
+
+
+    doc.append(Command("newlength",Command("spacebox")))
+
+    doc.append(Command("newlength",[Command("spacebox"), "8888888888"]))
+
+# \newlength{\spacebox}
+# \settowidth{\spacebox}{8888888888}
+
 
 
 ###########################
@@ -109,8 +131,8 @@ if __name__ == '__main__':
 
     MyName = UnsafeCommand('newcommand', r'\MyName', options=1,
                              extra_arguments=r"""
-    		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-     		\par \normalsize \normalfont
+            \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+            \par \normalsize \normalfont
 """)
 
     doc.append(MyName)
@@ -129,8 +151,8 @@ if __name__ == '__main__':
 
     MySlogan = UnsafeCommand('newcommand', r'\MySlogan', options=1,
                              extra_arguments=r"""
-  		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont
 """)
 
 
@@ -160,9 +182,9 @@ if __name__ == '__main__':
     PersonalEntry = UnsafeCommand('newcommand', r'\PersonalEntry', options=2,
                              extra_arguments=r"""
         \noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
  """)
 
     doc.append(PersonalEntry)
@@ -177,10 +199,10 @@ if __name__ == '__main__':
     SkillsEntry = UnsafeCommand('newcommand', r'\SkillsEntry', options=2,
                              extra_arguments=r"""
 
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par    % Entry value
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}			   % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par    % Entry value
 """)
 
     doc.append(SkillsEntry)
@@ -193,13 +215,13 @@ if __name__ == '__main__':
 
     EducationEntry = UnsafeCommand('newcommand', r'\EducationEntry', options=2,
                              extra_arguments=r"""
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par
  """)
 
     doc.append(EducationEntry)
@@ -214,11 +236,11 @@ if __name__ == '__main__':
     WorkEntry = UnsafeCommand('newcommand', r'\WorkEntry', options=2,
                              extra_arguments=r"""
          % Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
-		\noindent \textit{#3} \par              % Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par
  """)
 
     doc.append(WorkEntry)
@@ -229,15 +251,20 @@ if __name__ == '__main__':
 
 ###########################
 
+    doc.append(Command('MySlogan', 'Curriculum Vitae'))
 
+    doc.append(Command('sepspace'))
 
+    doc.append(Command('NewPart', "Personal details"))
 
-    doc.append(Command('MyName', 'Abhinav Sharma'))
+    doc.append(Command('PersonalEntry', ["Birth", "January 1, 1980"]))
 
+    doc.append(Command('PersonalEntry' , ["Address", "111 First St, New York"]))
 
-    # Add stuff to the document
-    with doc.create(Section('Experience')):
-        doc.append('Some text.')
+    doc.append(Command('PersonalEntry', ["Phone", "(123) 000-0000"]))
+#TODO
+   # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
+
 
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
