@@ -75,12 +75,12 @@ if __name__ == '__main__':
 
         with doc.create(Subsection('Fourtek (IT) Solutions Pvt. Ltd.')):
             doc.append('Software Engineer AI/ML')
-###########################
 
 ###########################
 
+###########################
 
-        ########
+
 # TODO: Learn how to deal with environments
 
     # Define the new environment using the style definition above
@@ -94,7 +94,6 @@ if __name__ == '__main__':
     with doc.create(ResumeEnvironment(arguments=Arguments('red', 3))) as environment:
         environment.append('This is the actual content\n')
 
-        ########
 
 ###########################
 
