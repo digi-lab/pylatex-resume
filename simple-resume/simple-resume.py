@@ -27,15 +27,15 @@ class ExampleEnvironment(Environment):
                 Package('sectsty')]
 
 
-class ExampleCommand(CommandBase):
-    """
-    A class representing a custom LaTeX command.
-    This class represents a custom LaTeX command named
-    ``exampleCommand``.
-    """
+# class ExampleCommand(CommandBase):
+#     """
+#     A class representing a custom LaTeX command.
+#     This class represents a custom LaTeX command named
+#     ``exampleCommand``.
+#     """
 
-    _latex_name = 'exampleCommand'
-    packages = [Package('graphicx')]
+#     _latex_name = 'exampleCommand'
+#     packages = [Package('graphicx')]
 
 #\sepspace
 class SepSpace(CommandBase):
@@ -187,10 +187,17 @@ if __name__ == '__main__':
    # doc.generate_pdf('basic_maketitle', clean_tex=False)
 
 
-   # Define the new command
-    new_comm = UnsafeCommand('newcommand', '\exampleCommand', options=3,
-                             extra_arguments=r'\color{#1} #2 #3 \color{black}')
-    doc.append(new_comm)
+   # # Define the new command
+   #  new_comm = UnsafeCommand('newcommand', '\exampleCommand', options=3,
+   #                           extra_arguments=r'\color{#1} #2 #3 \color{black}')
+   #  doc.append(new_comm)
+
+
+    new_part = UnsafeCommand('newcommand', r'\NewPart', options=1,
+                             extra_arguments=r'\section*{\uppercase{#1}}')
+    doc.append(new_part)
+
+
 
     # Use our newly created command with different arguments
     doc.append(ExampleCommand(arguments=Arguments('blue', 'Hello', 'World!')))

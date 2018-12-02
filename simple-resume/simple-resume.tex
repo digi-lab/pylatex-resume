@@ -6,16 +6,16 @@
 \usepackage{lastpage}%
 \usepackage{graphicx}%
 \usepackage{mdframed}%
+\usepackage{english}%
+\usepackage{utf8x}%
 \usepackage{microtype}%
 \usepackage{amsmath}%
 \usepackage{amsfonts}%
 \usepackage{amsthm}%
-\usepackage{english}%
-\usepackage{utf8x}%
-\usepackage{url}%
-\usepackage{sectsty}%
 \usepackage{svgnames}%
 \usepackage{geometry}%
+\usepackage{url}%
+\usepackage{sectsty}%
 %
 \title{Resumee}%
 \author{Abhinav Sharma}%
@@ -34,6 +34,7 @@ Also some crazy characters: \$\&\#\{\}
 
 %
 \newcommand{\exampleCommand}[3]{\color{#1} #2 #3 \color{black}}%
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}%
 \exampleCommand{blue}{Hello}{World!}%
 \exampleCommand{green}{Hello}{World!}%
 \exampleCommand{red}{Hello}{World!}%
