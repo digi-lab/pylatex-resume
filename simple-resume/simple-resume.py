@@ -14,14 +14,14 @@ class ExampleEnvironment(Environment):
     _latex_name = 'exampleEnvironment'
     packages = [
                 Package('mdframed'),
-                Package('english'),
-                Package('utf8x'),
+                Package('babel'),
+                #Package('inputenc'), #Already added by pylatex
                 Package('microtype'),
                 Package('amsmath'),
                 Package('amsfonts'),
                 Package('amsthm'),
                 Package('graphicx'),
-                Package('svgnames'),
+                Package('xcolor'),
                 Package('geometry'),
                 Package('url'),
                 Package('sectsty')]
@@ -44,7 +44,7 @@ class SepSpace(CommandBase):
     This class represents a custom LaTeX command named
     ``exampleCommand``.
     """
-
+#\newcommand{\sepspace}{\vspace*{1em}}
     _latex_name = 'sepspace'
 #    packages = [('graphicx')]
 
@@ -55,9 +55,13 @@ class MyName(CommandBase):
     This class represents a custom LaTeX command named
     ``exampleCommand``.
     """
+# { % Name
+# 		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+# 		\par \normalsize \normalfont}
+
 
     _latex_name = 'MyName'
-    packages = [Package('graphicx')]
+#   packages = [Package('graphicx')]
 
 
 #\MySlogan
@@ -67,6 +71,10 @@ class MySlogan(CommandBase):
     This class represents a custom LaTeX command named
     ``exampleCommand``.
     """
+# \newcommand{\MySlogan}[1]{ % Slogan (optional)
+# 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+# 		\par \normalsize \normalfont}
+
 
     _latex_name = 'MySlogan'
 #    packages = [Package('graphicx')]
@@ -168,7 +176,7 @@ def fill_document(doc):
 
 if __name__ == '__main__':
     # Basic document
-    doc = Document('basic')
+    doc = Document(documentclass = 'scrartcl' , document_options = ["paper=a4","fontsize=11pt"])
     fill_document(doc)
 
 #    doc.generate_pdf(clean_tex=False)
@@ -192,6 +200,31 @@ if __name__ == '__main__':
    #                           extra_arguments=r'\color{#1} #2 #3 \color{black}')
    #  doc.append(new_comm)
 
+############ MACROS
+
+#\newcommand{\sepspace}{\vspace*{1em}}
+    sepspace = UnsafeCommand('newcommand', r'\sepspace', options=0,
+                             extra_arguments=r'\vspace*{1em}')
+    doc.append(sepspace)
+
+# { % Name
+# 		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+# 		\par \normalsize \normalfont}
+
+    MyName = UnsafeCommand('newcommand', r'\MyName', options=1,
+                             extra_arguments=r'\Huge\usefont{OT1}{phv}{b}{n}\hfill{#1}\par\normalsize\normalfont')
+    doc.append(MyName)
+
+# \newcommand{\MySlogan}[1]{ % Slogan (optional)
+# 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+# 		\par \normalsize \normalfont}
+    MySlogan = UnsafeCommand('newcommand', r'\MySlogan', options=1,
+                             extra_arguments=r'\large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont')
+
+
+    doc.append(MySlogan)
+
+
 
     new_part = UnsafeCommand('newcommand', r'\NewPart', options=1,
                              extra_arguments=r'\section*{\uppercase{#1}}')
@@ -199,10 +232,10 @@ if __name__ == '__main__':
 
 
 
-    # Use our newly created command with different arguments
-    doc.append(ExampleCommand(arguments=Arguments('blue', 'Hello', 'World!')))
-    doc.append(ExampleCommand(arguments=Arguments('green', 'Hello', 'World!')))
-    doc.append(ExampleCommand(arguments=Arguments('red', 'Hello', 'World!')))
+    # # Use our newly created command with different arguments
+    # doc.append(ExampleCommand(arguments=Arguments('blue', 'Hello', 'World!')))
+    # doc.append(ExampleCommand(arguments=Arguments('green', 'Hello', 'World!')))
+    # doc.append(ExampleCommand(arguments=Arguments('red', 'Hello', 'World!')))
 
 
 

@@ -4,15 +4,14 @@
 \usepackage{lmodern}%
 \usepackage{textcomp}%
 \usepackage{lastpage}%
-\usepackage{graphicx}%
 \usepackage{mdframed}%
-\usepackage{english}%
-\usepackage{utf8x}%
+\usepackage{babel}%
 \usepackage{microtype}%
 \usepackage{amsmath}%
 \usepackage{amsfonts}%
 \usepackage{amsthm}%
-\usepackage{svgnames}%
+\usepackage{graphicx}%
+\usepackage{xcolor}%
 \usepackage{geometry}%
 \usepackage{url}%
 \usepackage{sectsty}%
@@ -33,11 +32,10 @@ Company 1 %
 Also some crazy characters: \$\&\#\{\}
 
 %
-\newcommand{\exampleCommand}[3]{\color{#1} #2 #3 \color{black}}%
+\newcommand{\sepspace}[0]{\vspace*{1em}}%
+\newcommand{\MyName}[1]{\Huge\usefont{OT1}{phv}{b}{n}\hfill{#1}\par\normalsize\normalfont}%
+\newcommand{\MySlogan}[1]{\large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont}%
 \newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}%
-\exampleCommand{blue}{Hello}{World!}%
-\exampleCommand{green}{Hello}{World!}%
-\exampleCommand{red}{Hello}{World!}%
 \section{Experience}%
 \label{sec:Experience}%
 Some text.
