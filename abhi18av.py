@@ -4,30 +4,6 @@ from pylatex import Document, Section, Subsection, Command, UnsafeCommand
 from pylatex.utils import NoEscape, italic
 
 
-# class ResumeEnvironment(Environment):
-#     """
-#     A class representing a custom LaTeX environment.
-#     This class represents a custom LaTeX environment named
-#     ``resumeEnvironment``.
-#     """
-
-#     _latex_name = 'resumeEnvironment'
-#     packages = [
-#                 Package('mdframed'),
-#                 Package('babel', options="english"),
-#                 #Package('inputenc'), #Already added by pylatex
-#                 Package('microtype', options ="protrusion=true,expansion=true"),
-#                 Package('amsmath'),
-#                 Package('amsfonts'),
-#                 Package('amsthm'),
-#                 Package('graphicx'),
-#                 Package('xcolor', options="svgnames"),
-#                 Package('geometry'),
-#                 Package('url'),
-#                 Package('sectsty')]
-
-
-
 #######################################
 
 class MyName(CommandBase):
@@ -86,42 +62,14 @@ if __name__ == '__main__':
 
     doc.append(Command('frenchspacing'))
     doc.append(Command('pagestyle', 'empty'))
-#\textheight=700px
     doc.append(Command("textheight=700px"))
-
-    # doc.append(Command("sectionfont", [
-    #     Command("usefont",["OT1","phv","b","n"]),
-    #     Command("sectionrule",["0pt","0pt",NoEscape("-5pt"),"3pt"])]))
-
     doc.append(Command("sectionfont", NoEscape(r""" \usefont{OT1}{phv}{b}{n} \sectionrule{0pt}{0pt}{-5pt}{3pt}}""")))
-
-
-    # doc.append(Command("sectionfont", [
-    #     Command("usefont",["OT1","phv","b","n"]),
-    #     NoEscape(Command("sectionrule",["0pt","0pt",NoEscape("-5pt"),"3pt"]))]))
-
-
-
-
     doc.append(Command("newlength",Command("spacebox")))
-
     doc.append(Command("settowidth",[Command("spacebox"), "8888888888"]))
 
-# \newlength{\spacebox}
-# \settowidth{\spacebox}{8888888888}
-
-
-
 ###########################
 
 ###########################
-
-    # # Use our newly created command with different arguments
-    # doc.append(ExampleCommand(arguments=Arguments('blue', 'Hello', 'World!')))
-
-
-
-
 
     sepspace = UnsafeCommand('newcommand', r'\sepspace',
                              extra_arguments=r"""
