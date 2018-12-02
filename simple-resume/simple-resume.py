@@ -252,6 +252,12 @@ if __name__ == '__main__':
 ###########################
 
 ###########################
+# TODO photograph
+# %\begin{wrapfigure}{l}{0.5\textwidth}
+# %	\vspace*{-2em}
+# %		\includegraphics[width=0.15\textwidth]{photo}
+# %\end{wrapfigure}
+
     doc.append(Command("MyName","Abhinav Sharma"))
 
     doc.append(Command('MySlogan', 'Curriculum Vitae'))
@@ -265,22 +271,12 @@ if __name__ == '__main__':
     doc.append(Command('PersonalEntry' , ["Address", "111 First St, New York"]))
 
     doc.append(Command('PersonalEntry', ["Phone", "(123) 000-0000"]))
+#TODO
+   # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
 
 
 
     doc.append(Command('NewPart', ["Education details", NoEscape("")]))
-
-#TODO
-   # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
-
-# \NewPart{Education}{}
-
-# \EducationEntry{MSc. Name of Education}{2010-2012}{Name of
-#   University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
-# \sepspace
-
-# \EducationEntry{BSc. Name of Education}{2007-2010}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
-
 
     doc.append(Command("EducationEntry",["MSc. Name of Education", NoEscape("2010-2012"), "Name of University", """Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section."""]))
 
@@ -288,10 +284,20 @@ if __name__ == '__main__':
 
     doc.append(Command('NewPart', ["Skills", NoEscape("")]))
 
-    doc.append(Command("SkillsEntry", [ "Languages", "English (fluent)"]))
+    doc.append(Command("SkillsEntry", [ "Human Languages", "English (fluent)"]))
     doc.append(Command("SkillsEntry", [ NoEscape(""), "Portuguese (fluent)"]))
 
-    tex = doc.dumps()  # The document as string in LaTeX syntax
 
+    doc.append(Command("SkillsEntry", [ "Programming Languages", "Clojure"]))
+
+    doc.append(Command('NewPart', ["Work details", NoEscape("")]))
+
+    doc.append(Command("WorkEntry",["Chief Technology Officer", NoEscape("August 2018 - Present"), "Cyber Indian App Stores", """I am leading a team of 8 in the core engineering wing."""]))
+
+    doc.append(Command('sepspace'))
+
+
+
+    tex = doc.dumps()  # The document as string in LaTeX syntax
 
     doc.generate_tex("./simple-resume")
