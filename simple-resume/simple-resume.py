@@ -178,11 +178,11 @@ def fill_document(doc):
     :type doc: :class:`pylatex.document.Document` instance
     """
     with doc.create(Section('Experience')):
-        doc.append('Company 1 ')
-        doc.append(italic('italic text. '))
+        doc.append('Cyber Indian App Stores Pvt. Ltd.')
+        doc.append(italic('Chief Technology Officer'))
 
-        with doc.create(Subsection('Company 2')):
-            doc.append('Also some crazy characters: $&#{}')
+        with doc.create(Subsection('Fourtek (IT) Solutions Pvt. Ltd.')):
+            doc.append('Software Engineer AI/ML')
 
 
 if __name__ == '__main__':
@@ -216,7 +216,10 @@ if __name__ == '__main__':
 
 #\newcommand{\sepspace}{\vspace*{1em}}
     sepspace = UnsafeCommand('newcommand', r'\sepspace', options=0,
-                             extra_arguments=r'\vspace*{1em}')
+                             extra_arguments=r"""
+                             \vspace*{1em}
+
+""")
     doc.append(sepspace)
 
 # { % Name
@@ -224,7 +227,12 @@ if __name__ == '__main__':
 # 		\par \normalsize \normalfont}
 
     MyName = UnsafeCommand('newcommand', r'\MyName', options=1,
-                             extra_arguments=r'\Huge\usefont{OT1}{phv}{b}{n}\hfill{#1}\par\normalsize\normalfont')
+                             extra_arguments=r"""
+    		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+     		\par \normalsize \normalfont
+
+""")
+
     doc.append(MyName)
 
 # \newcommand{\MySlogan}[1]{ % Slogan (optional)
@@ -232,9 +240,11 @@ if __name__ == '__main__':
 # 		\par \normalsize \normalfont}
     MySlogan = UnsafeCommand('newcommand', r'\MySlogan', options=1,
                              extra_arguments=r"""
-                             \large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont
+  		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont
 
- """)
+
+""")
 
 
     doc.append(MySlogan)
