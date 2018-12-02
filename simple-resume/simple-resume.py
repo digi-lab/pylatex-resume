@@ -4,27 +4,27 @@ from pylatex import Document, Section, Subsection, Command, UnsafeCommand
 from pylatex.utils import NoEscape, italic
 
 
-class ExampleEnvironment(Environment):
-    """
-    A class representing a custom LaTeX environment.
-    This class represents a custom LaTeX environment named
-    ``exampleEnvironment``.
-    """
+# class ExampleEnvironment(Environment):
+#     """
+#     A class representing a custom LaTeX environment.
+#     This class represents a custom LaTeX environment named
+#     ``exampleEnvironment``.
+#     """
 
-    _latex_name = 'exampleEnvironment'
-    packages = [
-                Package('mdframed'),
-                Package('babel', options="english"),
-                #Package('inputenc'), #Already added by pylatex
-                Package('microtype', options ="protrusion=true,expansion=true"),
-                Package('amsmath'),
-                Package('amsfonts'),
-                Package('amsthm'),
-                Package('graphicx'),
-                Package('xcolor', options="svgnames"),
-                Package('geometry'),
-                Package('url'),
-                Package('sectsty')]
+#     _latex_name = 'exampleEnvironment'
+#     packages = [
+#                 Package('mdframed'),
+#                 Package('babel', options="english"),
+#                 #Package('inputenc'), #Already added by pylatex
+#                 Package('microtype', options ="protrusion=true,expansion=true"),
+#                 Package('amsmath'),
+#                 Package('amsfonts'),
+#                 Package('amsthm'),
+#                 Package('graphicx'),
+#                 Package('xcolor', options="svgnames"),
+#                 Package('geometry'),
+#                 Package('url'),
+#                 Package('sectsty')]
 
 
 
@@ -60,6 +60,20 @@ class WorkEntry(CommandBase):
 
 if __name__ == '__main__':
 
+    packages = [
+                Package('mdframed'),
+                Package('babel', options="english"),
+                #Package('inputenc'), #Already added by pylatex
+                Package('microtype', options ="protrusion=true,expansion=true"),
+                Package('amsmath'),
+                Package('amsfonts'),
+                Package('amsthm'),
+                Package('graphicx'),
+                Package('xcolor', options="svgnames"),
+                Package('geometry'),
+                Package('url'),
+                Package('sectsty')]
+
 
     doc = Document(documentclass = 'scrartcl' , document_options = ["paper=a4","fontsize=11pt"])
 
@@ -83,13 +97,12 @@ if __name__ == '__main__':
 
 
 
-    sepspace = UnsafeCommand('newcommand', r'\sepspace', options=0,
+    sepspace = UnsafeCommand('newcommand', r'\sepspace',
                              extra_arguments=r"""
                              \vspace*{1em}
 """)
 
-#    doc.append(sepspace)
-    doc.append(sepspace(arguments=Arguments())
+    doc.append(sepspace)
 
 
 ###########################
@@ -106,7 +119,7 @@ if __name__ == '__main__':
     doc.append(MyName)
 
 
-    doc.append(MyName(arguments=Arguments("Abhinav Sharma")))
+#    doc.append(MyName(arguments=Arguments("Abhinav Sharma")))
 
 
 
@@ -198,28 +211,28 @@ if __name__ == '__main__':
         doc.append('Some text.')
 
 
-    # Define a style for our box
-    mdf_style_definition = UnsafeCommand('mdfdefinestyle',
-                                         arguments=['my_style',
-                                                    ('linecolor=#1,'
-                                                     'linewidth=#2,'
-                                                     'leftmargin=1cm,'
-                                                     'leftmargin=1cm')])
+    # # Define a style for our box
+    # mdf_style_definition = UnsafeCommand('mdfdefinestyle',
+    #                                      arguments=['my_style',
+    #                                                 ('linecolor=#1,'
+    #                                                  'linewidth=#2,'
+    #                                                  'leftmargin=1cm,'
+    #                                                  'leftmargin=1cm')])
 
 
 
-    # Define the new environment using the style definition above
-    new_env = UnsafeCommand('newenvironment', 'exampleEnvironment', options=2,
-                            extra_arguments=[
-                                mdf_style_definition.dumps() +
-                                r'\begin{mdframed}[style=my_style]',
-                                r'\end{mdframed}'])
-    doc.append(new_env)
+    # # Define the new environment using the style definition above
+    # new_env = UnsafeCommand('newenvironment', 'exampleEnvironment', options=2,
+    #                         extra_arguments=[
+    #                             mdf_style_definition.dumps() +
+    #                             r'\begin{mdframed}[style=my_style]',
+    #                             r'\end{mdframed}'])
+    # doc.append(new_env)
 
     # Usage of the newly created environment
-    with doc.create(
-            ExampleEnvironment(arguments=Arguments('red', 3))) as environment:
-        environment.append('This is the actual content')
+    # with doc.create(
+    #         ExampleEnvironment(arguments=Arguments('red', 3))) as environment:
+    #     environment.append('This is the actual content')
 
 
 #    doc.generate_pdf('basic_maketitle2', clean_tex=False)

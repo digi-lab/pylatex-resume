@@ -4,17 +4,6 @@
 \usepackage{lmodern}%
 \usepackage{textcomp}%
 \usepackage{lastpage}%
-\usepackage{mdframed}%
-\usepackage[english]{babel}%
-\usepackage[protrusion=true,expansion=true]{microtype}%
-\usepackage{amsmath}%
-\usepackage{amsfonts}%
-\usepackage{amsthm}%
-\usepackage{graphicx}%
-\usepackage[svgnames]{xcolor}%
-\usepackage{geometry}%
-\usepackage{url}%
-\usepackage{sectsty}%
 %
 \title{Resumee}%
 \author{Abhinav Sharma}%
@@ -22,7 +11,17 @@
 %
 \begin{document}%
 \normalsize%
-\newcommand{\sepspace}[0]{
+\maketitle%
+\section{Experience}%
+\label{sec:Experience}%
+Cyber Indian App Stores Pvt. Ltd.%
+\textit{Chief Technology Officer}%
+\subsection{Fourtek (IT) Solutions Pvt. Ltd.}%
+\label{subsec:Fourtek (IT) Solutions Pvt. Ltd.}%
+Software Engineer AI/ML
+
+%
+\newcommand{\sepspace}{
                              \vspace*{1em}
 }%
 \newcommand{\MyName}[1]{
@@ -66,23 +65,9 @@
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par
  }%
-\maketitle%
-\section{Experience}%
-\label{sec:Experience}%
-Cyber Indian App Stores Pvt. Ltd.%
-\textit{Chief Technology Officer}%
-\subsection{Fourtek (IT) Solutions Pvt. Ltd.}%
-\label{subsec:Fourtek (IT) Solutions Pvt. Ltd.}%
-Software Engineer AI/ML
-
-%
 \section{Experience}%
 \label{sec:Experience}%
 Some text.
 
 %
-\newenvironment{exampleEnvironment}[2]{\mdfdefinestyle{my_style}{linecolor=#1,linewidth=#2,leftmargin=1cm,leftmargin=1cm}\begin{mdframed}[style=my_style]}{\end{mdframed}}%
-\begin{exampleEnvironment}{red}{3}%
-This is the actual content%
-\end{exampleEnvironment}%
 \end{document}
