@@ -14,14 +14,14 @@ class ExampleEnvironment(Environment):
     _latex_name = 'exampleEnvironment'
     packages = [
                 Package('mdframed'),
-                Package('babel'),
+                Package('babel', options="english"),
                 #Package('inputenc'), #Already added by pylatex
-                Package('microtype'),
+                Package('microtype', options ="protrusion=true,expansion=true"),
                 Package('amsmath'),
                 Package('amsfonts'),
                 Package('amsthm'),
                 Package('graphicx'),
-                Package('xcolor'),
+                Package('xcolor', options="svgnames"),
                 Package('geometry'),
                 Package('url'),
                 Package('sectsty')]
@@ -116,6 +116,12 @@ class SkillsEntry(CommandBase):
     This class represents a custom LaTeX command named
     ``exampleCommand``.
     """
+#       \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+# 		\noindent\hangindent=2em\hangafter=0 % Indentation
+# 		\parbox{\spacebox}{        % Box to align text
+# 		\textit{#1}}			   % Entry name (birth, address, etc.)
+# 		\hspace{1.5em} #2 \par}    % Entry value
+
 
     _latex_name = 'SkillsEntry'
 #    packages = [Package('graphicx')]
@@ -225,7 +231,10 @@ if __name__ == '__main__':
 # 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
 # 		\par \normalsize \normalfont}
     MySlogan = UnsafeCommand('newcommand', r'\MySlogan', options=1,
-                             extra_arguments=r'\large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont')
+                             extra_arguments=r"""
+                             \large\usefont{OT1}{phv}{m}{n}\hfill\textit{#1}\par\normalsize\normalfont
+
+ """)
 
 
     doc.append(MySlogan)
@@ -233,7 +242,8 @@ if __name__ == '__main__':
 
 
     NewPart = UnsafeCommand('newcommand', r'\NewPart', options=1,
-                             extra_arguments=r'\section*{\uppercase{#1}}')
+                             extra_arguments=r"""\section*{\uppercase{#1}}""")
+
     doc.append(NewPart)
 
 # \newcommand{\PersonalEntry}[2]{
@@ -248,9 +258,62 @@ if __name__ == '__main__':
         \noindent\hangindent=2em\hangafter=0 % Indentation
 		\parbox{\spacebox}{        % Box to align text
 		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value""")
+		\hspace{1.5em} #2 \par}    % Entry value
+
+ """)
 
     doc.append(PersonalEntry)
+
+#       \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+# 		\noindent\hangindent=2em\hangafter=0 % Indentation
+# 		\parbox{\spacebox}{        % Box to align text
+# 		\textit{#1}}			   % Entry name (birth, address, etc.)
+# 		\hspace{1.5em} #2 \par}    % Entry value
+
+    SkillsEntry = UnsafeCommand('newcommand', r'\SkillsEntry', options=2,
+                             extra_arguments=r"""
+
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par    % Entry value
+
+""")
+
+    doc.append(SkillsEntry)
+
+    EducationEntry = UnsafeCommand('newcommand', r'\EducationEntry', options=2,
+                             extra_arguments=r"""
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par
+
+ """)
+
+    doc.append(EducationEntry)
+
+
+
+
+
+    WorkEntry = UnsafeCommand('newcommand', r'\WorkEntry', options=2,
+                             extra_arguments=r"""
+         % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par
+ """)
+
+    doc.append(WorkEntry)
+
+
+
 
 
     # # Use our newly created command with different arguments
