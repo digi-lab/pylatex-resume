@@ -145,11 +145,6 @@ if __name__ == '__main__':
     doc.append(MyName)
 
 
-
-#    doc.append(MyName(arguments=Arguments("Abhinav Sharma")))
-
-
-
 ###########################
 
 ###########################
@@ -257,6 +252,7 @@ if __name__ == '__main__':
 ###########################
 
 ###########################
+    doc.append(Command("MyName","Abhinav Sharma"))
 
     doc.append(Command('MySlogan', 'Curriculum Vitae'))
 
@@ -290,8 +286,10 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
+    doc.append(Command('NewPart', ["Skills", NoEscape("")]))
 
-
+    doc.append(Command("SkillsEntry", [ "Languages", "English (fluent)"]))
+    doc.append(Command("SkillsEntry", [ NoEscape(""), "Portuguese (fluent)"]))
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
 
