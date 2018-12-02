@@ -1,52 +1,103 @@
-\documentclass{article}%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}%
 \usepackage[T1]{fontenc}%
 \usepackage[utf8]{inputenc}%
 \usepackage{lmodern}%
 \usepackage{textcomp}%
 \usepackage{lastpage}%
 %
-\title{Resumee}%
-\author{Abhinav Sharma}%
-\date{\today}%
+\usepackage{mdframed}%
+\usepackage[english]{babel}%
+\usepackage[protrusion=true,expansion=true]{microtype}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amsthm}%
+\usepackage{graphicx}%
+\usepackage[svgnames]{xcolor}%
+\usepackage{geometry}%
+\usepackage{url}%
+\usepackage{sectsty}%
 %
 \begin{document}%
 \normalsize%
-\maketitle%
-\section{Experience}%
-\label{sec:Experience}%
-\subsection{Fourtek (IT) Solutions Pvt. Ltd.}%
-\label{subsec:Fourtek (IT) Solutions Pvt. Ltd.}%
-\textit{Software Engineer {-} AI/ML}
+\frenchspacing%
+\pagestyle{empty}%
+\textheight=700px%
+\sectionfont{ \usefont{OT1}{phv}{b}{n} \sectionrule{0pt}{0pt}{-5pt}{3pt}}}%
+\newlength{\spacebox}%
+\settowidth{\spacebox}{8888888888}%
+\newcommand{\sepspace}{
+                             \vspace*{1em}
+}%
+\newcommand{\MyName}[1]{
+            \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+            \par \normalsize \normalfont
+}%
+\newcommand{\MySlogan}[1]{
+        \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+        \par \normalsize \normalfont
+}%
+\newcommand{\NewPart}[1]{
+                             \section*{\uppercase{#1}}
+}%
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+ }%
+\newcommand{\SkillsEntry}[2]{
 
-%
-\subsection{Cyber Indian App Stores Pvt. Ltd.}%
-\label{subsec:Cyber Indian App Stores Pvt. Ltd.}%
-Chief Technology Officer
-
-%
-\section{Publications}%
-\label{sec:Publications}%
-\subsection{Research on Tuberculosis}%
-\label{subsec:Research on Tuberculosis}%
-\textit{Shell Scripting}
-
-%
-\section{"Itemize" list}%
-\label{sec:Itemize list}%
-\begin{itemize}%
-\item%
-the first item%
-\item%
-the second item%
-\item%
-the third etc%
-\ldots%
-\end{itemize}
-
-%
-\section{Experience}%
-\label{sec:Experience}%
-Some text.
-
-%
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}			   % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par    % Entry value
+}%
+\newcommand{\EducationEntry}[4]{
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par
+ }%
+\newcommand{\WorkEntry}[4]{
+         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par
+ }%
+\newcommand{\PublicationsEntry}[5]{
+         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 \par % Publisher
+        \noindent\hangindent=2em\hangafter=0 \small #5 % Description
+        \normalsize \par
+ }%
+\MyName{Abhinav Sharma}%
+\MySlogan{Curriculum Vitae}%
+\sepspace%
+\NewPart{Personal details}{}%
+\PersonalEntry{Birth}{January 1, 1980}%
+\PersonalEntry{Address}{111 First St, New York}%
+\PersonalEntry{Phone}{(123) 000{-}0000}%
+\NewPart{Education details}{}%
+\EducationEntry{MSc. Name of Education}{2010-2012}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}%
+\sepspace%
+\NewPart{Skills}{}%
+\SkillsEntry{Human Languages}{English (fluent)}%
+\SkillsEntry{}{Portuguese (fluent)}%
+\SkillsEntry{Programming Languages}{Clojure}%
+\NewPart{Work details}{}%
+\WorkEntry{Chief Technology Officer}{August 2018 - Present}{Cyber Indian App Stores}{I am leading a team of 8 in the core engineering wing.}%
+\sepspace%
+\WorkEntry{Software Engineer - Machine Learning}{August 2016 - July 2017}{Fourtek (IT) Solutions Pvt. Ltd.}{I worked as a co{-}founder of a product targeting the StartUp ecosystem.}%
+\sepspace%
+\NewPart{Publication details}{}%
+\PublicationsEntry{An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences}{Mar 8, 2018}{Springer}{Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.}%
+\sepspace%
 \end{document}

@@ -27,6 +27,8 @@ class EducationEntry(CommandBase):
 class WorkEntry(CommandBase):
     _latex_name = 'WorkEntry'
 
+class PublicationsEntry(CommandBase):
+    _latex_name = "PublicationsEntry"
 
 #######################################
 
@@ -196,10 +198,31 @@ if __name__ == '__main__':
     doc.append(WorkEntry)
 
 
+###########################
+
+###########################
+
+
+
+    PublicationsEntry = UnsafeCommand('newcommand', r'\PublicationsEntry', options=5,
+                             extra_arguments=r"""
+         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 \par % Publisher
+        \noindent\hangindent=2em\hangafter=0 \small #5 % Description
+        \normalsize \par
+ """)
+
+    doc.append(PublicationsEntry)
+
 
 ###########################
 
 ###########################
+
+
 # TODO photograph
 # %\begin{wrapfigure}{l}{0.5\textwidth}
 # %	\vspace*{-2em}
@@ -248,8 +271,19 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
+    doc.append(Command('NewPart', ["Publication details", NoEscape("")]))
+
+
+    # NOTE this is with the URL
+    # doc.append(Command("PublicationsEntry",["An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences", NoEscape("Mar 8, 2018"), "Springer", """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.""", NoEscape("""https://link.springer.com/chapter/10.1007/978-981-10-8527-7_18""")]))
+
+
+    doc.append(Command("PublicationsEntry",["An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences", NoEscape("Mar 8, 2018"), "Springer", """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
+
+    doc.append(Command('sepspace'))
+
 
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
 
-    doc.generate_tex("./simple-resume")
+    doc.generate_tex("./abhi18av")
