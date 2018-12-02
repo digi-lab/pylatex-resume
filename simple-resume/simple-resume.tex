@@ -1,0 +1,49 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{graphicx}%
+\usepackage{mdframed}%
+\usepackage{microtype}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amsthm}%
+\usepackage{english}%
+\usepackage{utf8x}%
+\usepackage{url}%
+\usepackage{sectsty}%
+\usepackage{svgnames}%
+\usepackage{geometry}%
+%
+\title{Resumee}%
+\author{Abhinav Sharma}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+\section{Experience}%
+\label{sec:Experience}%
+Company 1 %
+\textit{italic text. }%
+\subsection{Company 2}%
+\label{subsec:Company 2}%
+Also some crazy characters: \$\&\#\{\}
+
+%
+\newcommand{\exampleCommand}[3]{\color{#1} #2 #3 \color{black}}%
+\exampleCommand{blue}{Hello}{World!}%
+\exampleCommand{green}{Hello}{World!}%
+\exampleCommand{red}{Hello}{World!}%
+\section{Experience}%
+\label{sec:Experience}%
+Some text.
+
+%
+\newenvironment{exampleEnvironment}[2]{\mdfdefinestyle{my_style}{linecolor=#1,linewidth=#2,leftmargin=1cm,leftmargin=1cm}\begin{mdframed}[style=my_style]}{\end{mdframed}}%
+\begin{exampleEnvironment}{red}{3}%
+This is the actual content%
+\end{exampleEnvironment}%
+\end{document}
