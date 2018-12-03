@@ -278,7 +278,7 @@ if __name__ == '__main__':
 
     doc.append(Command('PersonalEntry', ["Birth", "March 29, 1993"]))
 
-    doc.append(Command('PersonalEntry' , ["Address", "458, Pocket-1, DDA SFS Flats, Sector-9, Dwarka, New Delhi - 110077"]))
+    doc.append(Command('PersonalEntry' , ["Address", NoEscape("458, Pocket-1, DDA SFS Flats, Sector-9, Dwarka, New Delhi - 110077")]))
 
     doc.append(Command('PersonalEntry', ["Phone", "(+91) 9650691024"]))
 #TODO url
@@ -343,14 +343,34 @@ if __name__ == '__main__':
 
     doc.append(Command('NewPart', ["Work details", NoEscape("")]))
 
-    doc.append(Command("WorkEntry",["Chief Technology Officer", NoEscape("August 2018 - Present"), "Cyber Indian App Stores", """I am leading a team of 8 in the core engineering wing."""]))
+    doc.append(Command("WorkEntry",["Chief Technology Officer and Product Strategist", NoEscape("August 2018 - Present"), "Cyber Indian App Stores", """I am leading a team of 8 in the core engineering wing."""]))
 
+    doc.append(Command('sepspace'))
+
+    doc.append(Command("WorkEntry",["Machine Learning Engineer and Product Strategist", NoEscape("1 January 2018 - 1 August 2018"), "Cyber Indian App Stores", """Working on, devnagri.com focusing on the application of Machine Learning and Natural Language Processing techniques in service of Indian languages.""""]))
 
     doc.append(Command('sepspace'))
 
     doc.append(Command("WorkEntry",[NoEscape("Software Engineer - Machine Learning"), NoEscape("August 2016 - July 2017"), "Fourtek (IT) Solutions Pvt. Ltd.", """I worked as a co-founder of a product targeting the StartUp ecosystem."""]))
 
     doc.append(Command('sepspace'))
+
+    doc.append(Command("WorkEntry",[NoEscape("Creative Writer"), NoEscape("1 July 2017 - Present"), "Medium.com", """My creative Scribblings can be viewed at my Medium.com blog."""]))
+
+    doc.append(Command('sepspace'))
+
+    doc.append(Command("WorkEntry",[NoEscape("Community Mentor"), NoEscape("1 April 2017 - Present"), "Coursera.com", """I was invited to become a member of the Coursear Mentorship program in which I had to guide individual learners in their online learning journey."""]))
+
+    doc.append(Command('sepspace'))
+
+    doc.append(Command("WorkEntry",[NoEscape("Student"), NoEscape("1 April 2017 - Present"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+
+    doc.append(Command('sepspace'))
+
+    doc.append(Command("WorkEntry",[NoEscape("Chief Technology Officer"), NoEscape("1 April 2017 - Present"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+
+
+
 
 #    "Finished On": null
 
