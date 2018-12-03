@@ -276,11 +276,11 @@ if __name__ == '__main__':
 
     doc.append(Command('NewPart', ["Personal details", NoEscape("")]))
 
-    doc.append(Command('PersonalEntry', ["Birth", "January 1, 1980"]))
+    doc.append(Command('PersonalEntry', ["Birth", "March 29, 1993"]))
 
-    doc.append(Command('PersonalEntry' , ["Address", "111 First St, New York"]))
+    doc.append(Command('PersonalEntry' , ["Address", "458, Pocket-1, DDA SFS Flats, Sector-9, Dwarka, New Delhi - 110077"]))
 
-    doc.append(Command('PersonalEntry', ["Phone", "(123) 000-0000"]))
+    doc.append(Command('PersonalEntry', ["Phone", "(+91) 9650691024"]))
 #TODO url
    # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
 
