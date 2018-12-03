@@ -317,7 +317,9 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("SkillsEntry", [ "Programming Languages", "Clojure"]))
+    doc.append(Command("SkillsEntry", [ "Programming Languages", "Clojure ( JVM )"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "ClojureScript (NodeJS)"]))
 
     doc.append(Command("SkillsEntry", [NoEscape("") , "OCaml"]))
 
@@ -329,9 +331,7 @@ if __name__ == '__main__':
 
     doc.append(Command("SkillsEntry", [NoEscape("") , "Julia"]))
 
-    doc.append(Command("SkillsEntry", [NoEscape("") , "NodeJS"]))
-
-    doc.append(Command("SkillsEntry", [NoEscape("") , "Java"]))
+    doc.append(Command("SkillsEntry", [NoEscape("") , "PowerShell"]))
 
 
 
@@ -347,7 +347,7 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",["Machine Learning Engineer and Product Strategist", NoEscape("1 January 2018 - 1 August 2018"), "Cyber Indian App Stores", """Working on, devnagri.com focusing on the application of Machine Learning and Natural Language Processing techniques in service of Indian languages.""""]))
+    doc.append(Command("WorkEntry",["Machine Learning Engineer and Product Strategist", NoEscape("1 January 2018 - 1 August 2018"), "Cyber Indian App Stores", """Working on, devnagri.com focusing on the application of Machine Learning and Natural Language Processing techniques in service of Indian languages."""]))
 
     doc.append(Command('sepspace'))
 
@@ -363,16 +363,12 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Student"), NoEscape("1 April 2017 - Present"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+    doc.append(Command("WorkEntry",[NoEscape("Student"), NoEscape("1 August 2016 - 1 August 2017"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Chief Technology Officer"), NoEscape("1 April 2017 - Present"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+    doc.append(Command("WorkEntry",[NoEscape("Co-Founder and Chief Technology Officer"), NoEscape("1 August 2015 - 1 July 2016"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
 
-
-
-
-#    "Finished On": null
 
 
 ###########################
