@@ -361,6 +361,12 @@ if __name__ == '__main__':
                        [NoEscape(data[0]['Name']),
                         NoEscape(data[0]['Authority'])]))
 
+    #TODO: iteratively add all the certificates
+# >>> len(data)
+# 78
+# >>> for i in range(10):
+# ...     print(data[i])
+
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
 
