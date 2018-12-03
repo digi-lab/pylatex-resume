@@ -304,11 +304,14 @@ if __name__ == '__main__':
 
     doc.append(Command("WorkEntry",["Chief Technology Officer", NoEscape("August 2018 - Present"), "Cyber Indian App Stores", """I am leading a team of 8 in the core engineering wing."""]))
 
+
     doc.append(Command('sepspace'))
 
     doc.append(Command("WorkEntry",[NoEscape("Software Engineer - Machine Learning"), NoEscape("August 2016 - July 2017"), "Fourtek (IT) Solutions Pvt. Ltd.", """I worked as a co-founder of a product targeting the StartUp ecosystem."""]))
 
     doc.append(Command('sepspace'))
+
+#    "Finished On": null
 
     doc.append(Command('NewPart', ["Publication details", NoEscape("")]))
 
