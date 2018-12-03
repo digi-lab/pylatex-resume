@@ -1,3 +1,4 @@
+import json
 from pylatex.base_classes import Environment, CommandBase, Arguments
 from pylatex.package import Package
 from pylatex import Document, Section, Subsection, Command, UnsafeCommand
@@ -29,6 +30,11 @@ class WorkEntry(CommandBase):
 
 class PublicationsEntry(CommandBase):
     _latex_name = "PublicationsEntry"
+
+class CertificationsEntry(CommandBase):
+    _latex_name = "CertificationsEntry"
+
+
 
 #######################################
 
@@ -222,6 +228,23 @@ if __name__ == '__main__':
 
 ###########################
 
+    CertificationsEntry = UnsafeCommand('newcommand', r'\CertificationsEntry', options=2,
+                             extra_arguments=r"""
+
+         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \noindent \textit{#2} \par              % Company
+        \normalsize \par
+
+""")
+
+    doc.append(CertificationsEntry)
+
+###########################
+
+###########################
+
+
 
 # TODO photograph
 # %\begin{wrapfigure}{l}{0.5\textwidth}
@@ -287,13 +310,56 @@ if __name__ == '__main__':
     doc.append(Command('sepspace'))
 
     doc.append(Command("PublicationsEntry",
-                    ["Analysis of potential household transmission events of tuberculosis in the city of Belem, Brazil",
-                    NoEscape("Oct 5, 2018"),
-                    "Elsevier",
-                    NoEscape("For this analysis, I contributed my knowledge of   - Shell scripting ( Scala-ammonite shell  / Bash )  - Vagrant and VirtualBox - Cloud Computing using Scaleway.com and Packet.net - CLI tools for data management wrt OneDrive") ]))
+                       [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
+                        NoEscape("Mar 8, 2018"),
+                        "Springer",
+                        """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
 
     doc.append(Command('sepspace'))
 
+    doc.append(Command("PublicationsEntry",
+                       [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
+                        NoEscape("Mar 8, 2018"),
+                        "Springer",
+                        """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
+
+    doc.append(Command('sepspace'))
+
+
+
+
+# #TODO this goes out of sync with the page above
+    # doc.append(Command("PublicationsEntry",
+    #                  ["Analysis of potential household transmission events of tuberculosis in the city of Belem, Brazil",
+    #                  NoEscape("Oct 5, 2018"),
+    #                  "Elsevier",
+    #                   NoEscape("""For this analysis, I contributed my knowledge of   - Shell scripting ( Scala-ammonite shell  / Bash )  - Vagrant and VirtualBox - Cloud Computing using Scaleway.com and Packet.net - CLI tools for data management wrt OneDrive""")]))
+
+
+
+
+#     doc.append(Command('sepspace'))
+
+#     doc.append(Command("PublicationsEntry",
+#                [NoEscape("A Pilot Study for Phylogenetic Assessment of Mycobacterium bovis from Marajó Island, Brazil, based on Whole Genome Sequencing"),
+#                NoEscape("Jul 18, 2018"),
+#                 "Independent",
+#                NoEscape("""I contributed my skills regarding the data analysis pipeline.""")]))
+
+
+    doc.append(Command('NewPart', ["Certifications", NoEscape("")]))
+
+    with open('./Certifications.json', encoding='utf-8') as data_file:
+        data = json.loads(data_file.read())
+
+# >>> data[0]['Name']
+# 'Learning How to Learn'
+# >>> data[0]['Authority']
+# 'University of California San Diego'
+
+    doc.append(Command("CertificationsEntry",
+                       [NoEscape(data[0]['Name']),
+                        NoEscape(data[0]['Authority'])]))
 
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
