@@ -357,15 +357,18 @@ if __name__ == '__main__':
 # >>> data[0]['Authority']
 # 'University of California San Diego'
 
-    doc.append(Command("CertificationsEntry",
-                       [NoEscape(data[0]['Name']),
-                        NoEscape(data[0]['Authority'])]))
+    # doc.append(Command("CertificationsEntry",
+    #                    [NoEscape(data[0]['Name']),
+    #                     NoEscape(data[0]['Authority'])]))
 
-    #TODO: iteratively add all the certificates
-# >>> len(data)
-# 78
-# >>> for i in range(10):
-# ...     print(data[i])
+
+
+    for i in range(len(data)):
+        doc.append(Command("CertificationsEntry",
+                       [NoEscape(data[i]['Name']),
+                        NoEscape(data[i]['Authority'])]))
+        doc.append(Command('sepspace'))
+
 
 
     tex = doc.dumps()  # The document as string in LaTeX syntax
