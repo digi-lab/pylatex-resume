@@ -303,11 +303,38 @@ if __name__ == '__main__':
 
     doc.append(Command('NewPart', ["Skills", NoEscape("")]))
 
-    doc.append(Command("SkillsEntry", [ "Human Languages", "English (fluent)"]))
-    doc.append(Command("SkillsEntry", [ NoEscape(""), "Portuguese (fluent)"]))
+    doc.append(Command("SkillsEntry", [ "Human Languages", "English"]))
 
+    doc.append(Command("SkillsEntry", [ NoEscape(""), "Hindi"]))
+
+    doc.append(Command("SkillsEntry", [ NoEscape(""), "Portuguese"]))
+
+    doc.append(Command("SkillsEntry", [ NoEscape(""), "Russian"]))
+
+    doc.append(Command("SkillsEntry", [ NoEscape(""), "German"]))
+
+#    doc.append(Command("SkillsEntry", [ NoEscape(""), "Korean"]))
+
+    doc.append(Command('sepspace'))
 
     doc.append(Command("SkillsEntry", [ "Programming Languages", "Clojure"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "OCaml"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "Go"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "C"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "Python"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "Julia"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "NodeJS"]))
+
+    doc.append(Command("SkillsEntry", [NoEscape("") , "Java"]))
+
+
+
 
 ###########################
 # Work Details
