@@ -278,7 +278,19 @@ if __name__ == '__main__':
     # doc.append(Command("PublicationsEntry",["An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences", NoEscape("Mar 8, 2018"), "Springer", """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.""", NoEscape("""https://link.springer.com/chapter/10.1007/978-981-10-8527-7_18""")]))
 
 
-    doc.append(Command("PublicationsEntry",["An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences", NoEscape("Mar 8, 2018"), "Springer", """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
+    doc.append(Command("PublicationsEntry",
+                       [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
+                        NoEscape("Mar 8, 2018"),
+                        "Springer",
+                        """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
+
+    doc.append(Command('sepspace'))
+
+    doc.append(Command("PublicationsEntry",
+                    ["Analysis of potential household transmission events of tuberculosis in the city of Belem, Brazil",
+                    NoEscape("Oct 5, 2018"),
+                    "Elsevier",
+                    NoEscape("For this analysis, I contributed my knowledge of   - Shell scripting ( Scala-ammonite shell  / Bash )  - Vagrant and VirtualBox - Cloud Computing using Scaleway.com and Packet.net - CLI tools for data management wrt OneDrive") ]))
 
     doc.append(Command('sepspace'))
 
