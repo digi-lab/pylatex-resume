@@ -281,7 +281,7 @@ if __name__ == '__main__':
     doc.append(Command('PersonalEntry' , ["Address", "111 First St, New York"]))
 
     doc.append(Command('PersonalEntry', ["Phone", "(123) 000-0000"]))
-#TODO
+#TODO url
    # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
 
 
@@ -313,9 +313,6 @@ if __name__ == '__main__':
     doc.append(Command('NewPart', ["Publication details", NoEscape("")]))
 
 
-    # NOTE this is with the URL
-    # doc.append(Command("PublicationsEntry",["An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences", NoEscape("Mar 8, 2018"), "Springer", """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.""", NoEscape("""https://link.springer.com/chapter/10.1007/978-981-10-8527-7_18""")]))
-
 
     doc.append(Command("PublicationsEntry",
                        [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
@@ -333,34 +330,6 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("PublicationsEntry",
-                       [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
-                        NoEscape("Mar 8, 2018"),
-                        "Springer",
-                        """Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications."""]))
-
-    doc.append(Command('sepspace'))
-
-
-
-
-# #TODO this goes out of sync with the page above
-    # doc.append(Command("PublicationsEntry",
-    #                  ["Analysis of potential household transmission events of tuberculosis in the city of Belem, Brazil",
-    #                  NoEscape("Oct 5, 2018"),
-    #                  "Elsevier",
-    #                   NoEscape("""For this analysis, I contributed my knowledge of   - Shell scripting ( Scala-ammonite shell  / Bash )  - Vagrant and VirtualBox - Cloud Computing using Scaleway.com and Packet.net - CLI tools for data management wrt OneDrive""")]))
-
-
-
-
-#     doc.append(Command('sepspace'))
-
-#     doc.append(Command("PublicationsEntry",
-#                [NoEscape("A Pilot Study for Phylogenetic Assessment of Mycobacterium bovis from Marajó Island, Brazil, based on Whole Genome Sequencing"),
-#                NoEscape("Jul 18, 2018"),
-#                 "Independent",
-#                NoEscape("""I contributed my skills regarding the data analysis pipeline.""")]))
 
 
     doc.append(Command('NewPart', ["Certifications", NoEscape("")]))
@@ -381,9 +350,10 @@ if __name__ == '__main__':
 
 
     for i in range(len(data)):
+        #print(i)
         doc.append(Command("CertificationsEntry",
                        [NoEscape(data[i]['Name']),
-                        NoEscape(data[i]['Start Date'].split('-')[0]),
+                        NoEscape(data[i]['Start Date']),
                         NoEscape(data[i]['Authority'])]))
         doc.append(Command('sepspace'))
 

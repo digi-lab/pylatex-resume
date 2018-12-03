@@ -78,11 +78,13 @@
         \noindent\hangindent=2em\hangafter=0 \small #5 % Description
         \normalsize \par
  }%
-\newcommand{\CertificationsEntry}[2]{
+\newcommand{\CertificationsEntry}[3]{
 
          % Same as \EducationEntry
-        \noindent \textbf{#1} \hfill      % Jobname
-        \noindent \textit{#2} \par              % Company
+        \noindent \textbf{#1} \hfill      % Certification Name
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % University
+%        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
         \normalsize \par
 
 }%
@@ -110,85 +112,161 @@
 \sepspace%
 \PublicationsEntry{An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences}{Mar 8, 2018}{Springer}{Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.}%
 \sepspace%
-\PublicationsEntry{An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences}{Mar 8, 2018}{Springer}{Guided two undergraduates into the art of storytelling through Data and their hard work eventually landed a paper in the Springer publications.}%
-\sepspace%
 \NewPart{Certifications}{}%
-\CertificationsEntry{Learning How to Learn}{University of California San Diego}%
-\CertificationsEntry{Chinese for Beginners}{Peking University}%
-\CertificationsEntry{Ruby on Rails: An Introduction}{Johns Hopkins University School of Education}%
-\CertificationsEntry{Julia Scientific Programming}{University of Cape Town}%
-\CertificationsEntry{Chinese Language - Diploma of Graduation }{Proflangs Foreign Language Institute}%
-\CertificationsEntry{Introduction to Genomic Technologies}{The Johns Hopkins University}%
-\CertificationsEntry{Miracles of Human Language: An Introduction to Linguistics}{Leiden University}%
-\CertificationsEntry{Chinese for HSK 1}{Peking University}%
-\CertificationsEntry{Functional Programming Principles in Scala}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Functional Program Design in Scala}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Parallel Programming}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Rails with Active Record and Action Pack}{Johns Hopkins University School of Education}%
-\CertificationsEntry{Ruby on Rails Web Services and Integration with MongoDB}{Johns Hopkins University School of Education}%
-\CertificationsEntry{Python Data Structures}{University of Michigan}%
-\CertificationsEntry{More Chinese for Beginners}{Peking University}%
-\CertificationsEntry{Understanding China, 1700-2000: A Data Analytic Approach, Part 1}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Understanding China, 1700-2000: A Data Analytic Approach, Part 2}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Programming for Everybody }{University of Michigan}%
-\CertificationsEntry{Chinese for HSK 2}{Peking University}%
-\CertificationsEntry{Big Data Analysis with Scala and Spark}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Algorithms on Graphs}{University of California San Diego}%
-\CertificationsEntry{Introduction to Software Product Management}{University of Alberta}%
-\CertificationsEntry{Algorithms on Strings}{University of California San Diego}%
-\CertificationsEntry{A Crash Course in Data Science}{The Johns Hopkins University}%
-\CertificationsEntry{HTML, CSS, and Javascript for Web Developers}{The Johns Hopkins University}%
-\CertificationsEntry{Data Science in Real Life}{The Johns Hopkins University}%
-\CertificationsEntry{Managing Data Analysis}{Johns Hopkins University School of Education}%
-\CertificationsEntry{Algorithmic Toolbox}{University of California San Diego}%
-\CertificationsEntry{Building a Data Science Team}{The Johns Hopkins University}%
-\CertificationsEntry{Using Python to Access Web Data}{University of Michigan}%
-\CertificationsEntry{Software Processes and Agile Practices}{University of Alberta}%
-\CertificationsEntry{Reviews & Metrics for Software Improvements}{University of Alberta}%
-\CertificationsEntry{Single Page Web Applications with AngularJS}{Johns Hopkins University School of Education}%
-\CertificationsEntry{Chinese Characters for beginner 汉字}{Peking University}%
-\CertificationsEntry{The Data Scientist’s Toolbox}{The Johns Hopkins University}%
-\CertificationsEntry{Data Science Math Skills}{Duke University}%
-\CertificationsEntry{Google Cloud Platform Fundamentals: Core Infrastructure}{Google Cloud Certified}%
-\CertificationsEntry{R Programming}{The Johns Hopkins University}%
-\CertificationsEntry{Using Databases with Python}{University of Michigan}%
-\CertificationsEntry{Principles of Computing (Part 2)}{Rice University}%
-\CertificationsEntry{Configuration Management on Google Cloud Platform}{Google Cloud Certified}%
-\CertificationsEntry{First Step Korean}{Yonsei University}%
-\CertificationsEntry{Computing, Storage and Security with Google Cloud Platform}{Google Cloud Certified}%
-\CertificationsEntry{Chinese for HSK 3 PART I}{Peking University}%
-\CertificationsEntry{Chinese for HSK 3 PART II}{Peking University}%
-\CertificationsEntry{Learn Chinese: HSK Test Preparation}{Peking University}%
-\CertificationsEntry{Server-side Development with NodeJS}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Exploratory Data Analysis}{The Johns Hopkins University}%
-\CertificationsEntry{Getting and Cleaning Data}{The Johns Hopkins University}%
-\CertificationsEntry{Practical Machine Learning}{The Johns Hopkins University}%
-\CertificationsEntry{Reproducible Research}{The Johns Hopkins University}%
-\CertificationsEntry{Front-End Web UI Frameworks and Tools}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Mandarin Chinese 1: Chinese for Beginners}{Shanghai Jiao Tong University}%
-\CertificationsEntry{Statistical Inference}{The Johns Hopkins University}%
-\CertificationsEntry{Advanced R Programming}{The Johns Hopkins University}%
-\CertificationsEntry{Mandarin Chinese 2: Chinese for Beginners}{Shanghai Jiao Tong University}%
-\CertificationsEntry{Mandarin Chinese 3: Chinese for Beginners}{Shanghai Jiao Tong University}%
-\CertificationsEntry{Front-End JavaScript Frameworks: AngularJS}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Regression Models}{The Johns Hopkins University}%
-\CertificationsEntry{Innovation for Entrepreneurs: From Idea to Marketplace}{University of Maryland College Park}%
-\CertificationsEntry{Developing Innovative Ideas for New Companies}{University of Maryland College Park}%
-\CertificationsEntry{New Venture Finance: Startup Funding for Entrepreneurs}{University of Maryland College Park}%
-\CertificationsEntry{Functional Programming in Scala Capstone}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Søren Kierkegaard - Subjectivity, Irony and the Crisis of Modernity}{Københavns Universitet}%
-\CertificationsEntry{HTML, CSS and JavaScript}{The Hong Kong University of Science and Technology}%
-\CertificationsEntry{Deep Learning Prerequisites: The Numpy Stack in Python}{Udemy}%
-\CertificationsEntry{OrientDB - Getting Started}{Udemy}%
-\CertificationsEntry{Functional Programming in Scala Capstone}{EPFL (École polytechnique fédérale de Lausanne)}%
-\CertificationsEntry{Mindshift: Break Through Obstacles to Learning and Discover Your Hidden Potential }{McMaster University}%
-\CertificationsEntry{SQL : The Beginners Guide - with PostgreSQL}{Udemy}%
-\CertificationsEntry{The Complete Emacs Course}{Udemy}%
-\CertificationsEntry{ Intro selenium by create a linkedin bot with python}{Udemy}%
-\CertificationsEntry{ Applied Computer Science. Git}{Stepik}%
-\CertificationsEntry{Introduction to software containerisation and Docker}{Udemy}%
-\CertificationsEntry{Coursera Mentor Community and Training Course}{Coursera}%
-\CertificationsEntry{Business Model Canvas: A Tool for Entrepreneurs and Innovators (Project-Centered Course)}{University System Of Georgia}%
-\CertificationsEntry{Artificial Intelligence NanoDegree}{Udacity}%
-\CertificationsEntry{Certificate in Russian language }{Indira Gandhi National Open University}%
+\CertificationsEntry{Learning How to Learn}{2016-12-01}{University of California San Diego}%
+\sepspace%
+\CertificationsEntry{Chinese for Beginners}{2016-10-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Ruby on Rails: An Introduction}{2017-01-01}{Johns Hopkins University School of Education}%
+\sepspace%
+\CertificationsEntry{Julia Scientific Programming}{2017-01-01}{University of Cape Town}%
+\sepspace%
+\CertificationsEntry{Chinese Language - Diploma of Graduation }{2016-10-01}{Proflangs Foreign Language Institute}%
+\sepspace%
+\CertificationsEntry{Introduction to Genomic Technologies}{2017-03-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Miracles of Human Language: An Introduction to Linguistics}{2017-03-01}{Leiden University}%
+\sepspace%
+\CertificationsEntry{Chinese for HSK 1}{2017-03-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Functional Programming Principles in Scala}{2017-03-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Functional Program Design in Scala}{2017-03-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Parallel Programming}{2017-03-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Rails with Active Record and Action Pack}{2017-03-01}{Johns Hopkins University School of Education}%
+\sepspace%
+\CertificationsEntry{Ruby on Rails Web Services and Integration with MongoDB}{2017-03-01}{Johns Hopkins University School of Education}%
+\sepspace%
+\CertificationsEntry{Python Data Structures}{2017-03-01}{University of Michigan}%
+\sepspace%
+\CertificationsEntry{More Chinese for Beginners}{2017-03-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Understanding China, 1700-2000: A Data Analytic Approach, Part 1}{2017-03-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Understanding China, 1700-2000: A Data Analytic Approach, Part 2}{2017-03-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Programming for Everybody }{2017-03-01}{University of Michigan}%
+\sepspace%
+\CertificationsEntry{Chinese for HSK 2}{2017-03-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Big Data Analysis with Scala and Spark}{2017-03-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Algorithms on Graphs}{2017-03-01}{University of California San Diego}%
+\sepspace%
+\CertificationsEntry{Introduction to Software Product Management}{2017-03-01}{University of Alberta}%
+\sepspace%
+\CertificationsEntry{Algorithms on Strings}{2017-03-01}{University of California San Diego}%
+\sepspace%
+\CertificationsEntry{A Crash Course in Data Science}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{HTML, CSS, and Javascript for Web Developers}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Data Science in Real Life}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Managing Data Analysis}{None}{Johns Hopkins University School of Education}%
+\sepspace%
+\CertificationsEntry{Algorithmic Toolbox}{2017-04-01}{University of California San Diego}%
+\sepspace%
+\CertificationsEntry{Building a Data Science Team}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Using Python to Access Web Data}{2017-04-01}{University of Michigan}%
+\sepspace%
+\CertificationsEntry{Software Processes and Agile Practices}{2017-04-01}{University of Alberta}%
+\sepspace%
+\CertificationsEntry{Reviews & Metrics for Software Improvements}{2017-04-01}{University of Alberta}%
+\sepspace%
+\CertificationsEntry{Single Page Web Applications with AngularJS}{None}{Johns Hopkins University School of Education}%
+\sepspace%
+\CertificationsEntry{Chinese Characters for beginner 汉字}{2017-04-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{The Data Scientist’s Toolbox}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Data Science Math Skills}{2017-04-01}{Duke University}%
+\sepspace%
+\CertificationsEntry{Google Cloud Platform Fundamentals: Core Infrastructure}{None}{Google Cloud Certified}%
+\sepspace%
+\CertificationsEntry{R Programming}{2017-04-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Using Databases with Python}{2017-04-01}{University of Michigan}%
+\sepspace%
+\CertificationsEntry{Principles of Computing (Part 2)}{2017-04-01}{Rice University}%
+\sepspace%
+\CertificationsEntry{Configuration Management on Google Cloud Platform}{None}{Google Cloud Certified}%
+\sepspace%
+\CertificationsEntry{First Step Korean}{2017-04-01}{Yonsei University}%
+\sepspace%
+\CertificationsEntry{Computing, Storage and Security with Google Cloud Platform}{2017-04-01}{Google Cloud Certified}%
+\sepspace%
+\CertificationsEntry{Chinese for HSK 3 PART I}{2017-04-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Chinese for HSK 3 PART II}{2017-04-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Learn Chinese: HSK Test Preparation}{2017-04-01}{Peking University}%
+\sepspace%
+\CertificationsEntry{Server-side Development with NodeJS}{2017-05-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Exploratory Data Analysis}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Getting and Cleaning Data}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Practical Machine Learning}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Reproducible Research}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Front-End Web UI Frameworks and Tools}{2017-06-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Mandarin Chinese 1: Chinese for Beginners}{2017-06-01}{Shanghai Jiao Tong University}%
+\sepspace%
+\CertificationsEntry{Statistical Inference}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Advanced R Programming}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Mandarin Chinese 2: Chinese for Beginners}{2017-06-01}{Shanghai Jiao Tong University}%
+\sepspace%
+\CertificationsEntry{Mandarin Chinese 3: Chinese for Beginners}{None}{Shanghai Jiao Tong University}%
+\sepspace%
+\CertificationsEntry{Front-End JavaScript Frameworks: AngularJS}{2017-06-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Regression Models}{2017-06-01}{The Johns Hopkins University}%
+\sepspace%
+\CertificationsEntry{Innovation for Entrepreneurs: From Idea to Marketplace}{2017-06-01}{University of Maryland College Park}%
+\sepspace%
+\CertificationsEntry{Developing Innovative Ideas for New Companies}{2017-06-01}{University of Maryland College Park}%
+\sepspace%
+\CertificationsEntry{New Venture Finance: Startup Funding for Entrepreneurs}{2017-06-01}{University of Maryland College Park}%
+\sepspace%
+\CertificationsEntry{Functional Programming in Scala Capstone}{2017-06-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Søren Kierkegaard - Subjectivity, Irony and the Crisis of Modernity}{2017-07-01}{Københavns Universitet}%
+\sepspace%
+\CertificationsEntry{HTML, CSS and JavaScript}{2017-07-01}{The Hong Kong University of Science and Technology}%
+\sepspace%
+\CertificationsEntry{Deep Learning Prerequisites: The Numpy Stack in Python}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{OrientDB - Getting Started}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{Functional Programming in Scala Capstone}{2017-07-01}{EPFL (École polytechnique fédérale de Lausanne)}%
+\sepspace%
+\CertificationsEntry{Mindshift: Break Through Obstacles to Learning and Discover Your Hidden Potential }{2017-07-01}{McMaster University}%
+\sepspace%
+\CertificationsEntry{SQL : The Beginners Guide - with PostgreSQL}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{The Complete Emacs Course}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{ Intro selenium by create a linkedin bot with python}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{ Applied Computer Science. Git}{2017-07-01}{Stepik}%
+\sepspace%
+\CertificationsEntry{Introduction to software containerisation and Docker}{2017-07-01}{Udemy}%
+\sepspace%
+\CertificationsEntry{Coursera Mentor Community and Training Course}{2017-07-01}{Coursera}%
+\sepspace%
+\CertificationsEntry{Business Model Canvas: A Tool for Entrepreneurs and Innovators (Project-Centered Course)}{2017-08-01}{University System Of Georgia}%
+\sepspace%
+\CertificationsEntry{Artificial Intelligence NanoDegree}{2017-09-01}{Udacity}%
+\sepspace%
+\CertificationsEntry{Certificate in Russian language }{2018-08-01}{Indira Gandhi National Open University}%
+\sepspace%
 \end{document}
