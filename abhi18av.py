@@ -228,15 +228,31 @@ if __name__ == '__main__':
 
 ###########################
 
-    CertificationsEntry = UnsafeCommand('newcommand', r'\CertificationsEntry', options=2,
+#     CertificationsEntry = UnsafeCommand('newcommand', r'\CertificationsEntry', options=2,
+#                              extra_arguments=r"""
+
+#          % Same as \EducationEntry
+#         \noindent \textbf{#1} \hfill      % Jobname
+#         \noindent \textit{#2} \par              % Company
+#         \normalsize \par
+
+# """)
+
+
+
+    CertificationsEntry = UnsafeCommand('newcommand', r'\CertificationsEntry', options=3,
                              extra_arguments=r"""
 
          % Same as \EducationEntry
-        \noindent \textbf{#1} \hfill      % Jobname
-        \noindent \textit{#2} \par              % Company
+        \noindent \textbf{#1} \hfill      % Certification Name
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % University
+%        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
         \normalsize \par
 
 """)
+
+
 
     doc.append(CertificationsEntry)
 
@@ -361,11 +377,13 @@ if __name__ == '__main__':
     #                    [NoEscape(data[0]['Name']),
     #                     NoEscape(data[0]['Authority'])]))
 
+    # 1. name 2. duration 3. university 4. description
 
 
     for i in range(len(data)):
         doc.append(Command("CertificationsEntry",
                        [NoEscape(data[i]['Name']),
+                        NoEscape(data[i]['Start Date'].split('-')[0]),
                         NoEscape(data[i]['Authority'])]))
         doc.append(Command('sepspace'))
 
