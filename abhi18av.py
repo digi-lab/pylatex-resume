@@ -257,7 +257,7 @@ if __name__ == '__main__':
     doc.append(CertificationsEntry)
 
 ###########################
-
+# Personal Details
 ###########################
 
 
@@ -284,6 +284,10 @@ if __name__ == '__main__':
 #TODO url
    # doc.append(Command('PersonalEntry'["Mail", "\url{me@home.com}"]))
 
+###########################
+# Education Details
+###########################
+
 
 
     doc.append(Command('NewPart', ["Education details", NoEscape("")]))
@@ -291,6 +295,11 @@ if __name__ == '__main__':
     doc.append(Command("EducationEntry",["MSc. Name of Education", NoEscape("2010-2012"), "Name of University", """Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section."""]))
 
     doc.append(Command('sepspace'))
+###########################
+# Skills Details
+###########################
+
+
 
     doc.append(Command('NewPart', ["Skills", NoEscape("")]))
 
@@ -299,6 +308,11 @@ if __name__ == '__main__':
 
 
     doc.append(Command("SkillsEntry", [ "Programming Languages", "Clojure"]))
+
+###########################
+# Work Details
+###########################
+
 
     doc.append(Command('NewPart', ["Work details", NoEscape("")]))
 
@@ -313,10 +327,14 @@ if __name__ == '__main__':
 
 #    "Finished On": null
 
+
+###########################
+# Publication Details
+###########################
+
     doc.append(Command('NewPart', ["Publication details", NoEscape("")]))
 
 
-
     doc.append(Command("PublicationsEntry",
                        [NoEscape("An Analytical Study to Find the Major Factors Behind the Great Smog of Delhi, 2016: Using Fundamental Data Sciences"),
                         NoEscape("Mar 8, 2018"),
@@ -333,23 +351,15 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
+###########################
+# Certifications
+###########################
 
 
     doc.append(Command('NewPart', ["Certifications", NoEscape("")]))
 
     with open('./Certifications.json', encoding='utf-8') as data_file:
         data = json.loads(data_file.read())
-
-# >>> data[0]['Name']
-# 'Learning How to Learn'
-# >>> data[0]['Authority']
-# 'University of California San Diego'
-
-    # doc.append(Command("CertificationsEntry",
-    #                    [NoEscape(data[0]['Name']),
-    #                     NoEscape(data[0]['Authority'])]))
-
-    # 1. name 2. duration 3. university 4. description
 
 
     for i in range(len(data)):
@@ -359,6 +369,10 @@ if __name__ == '__main__':
                         NoEscape(data[i]['Start Date']),
                         NoEscape(data[i]['Authority'])]))
         doc.append(Command('sepspace'))
+
+###########################
+# Generate the TEX document
+###########################
 
 
 
