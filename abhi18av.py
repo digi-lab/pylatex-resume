@@ -278,7 +278,8 @@ if __name__ == '__main__':
 
     doc.append(Command('PersonalEntry', ["Birth", "March 29, 1993"]))
 
-    doc.append(Command('PersonalEntry' , ["Address", NoEscape("458, Pocket-1, DDA SFS Flats, Sector-9, Dwarka, New Delhi - 110077")]))
+    doc.append(Command('PersonalEntry' , ["Address",
+                                          NoEscape("458, Pocket-1, DDA SFS Flats, Sector-9, Dwarka, N.D. - 110077")]))
 
     doc.append(Command('PersonalEntry', ["Phone", "(+91) 9650691024"]))
 #TODO url
@@ -292,9 +293,19 @@ if __name__ == '__main__':
 
     doc.append(Command('NewPart', ["Education details", NoEscape("")]))
 
-    doc.append(Command("EducationEntry",["MSc. Name of Education", NoEscape("2010-2012"), "Name of University", """Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section."""]))
 
     doc.append(Command('sepspace'))
+
+    doc.append(Command("EducationEntry", [ "B.Tech (Computer Science Department, specialization in IT)",
+                                       NoEscape("2012-2016"),
+                                       "Delhi Technological University (formerly Delhi College of Engineering)",
+                                       """I secured an All India Rank of 9000 out of 1.2 million students and cleared the cut-off for the prestigious Computer Science department. In addition to the Degree curicullum, I read and reviewed about 200 books on  - Literature - Philosophy - Fiction  All the reviews can be read on my Goodreads.com profile https://www.goodreads.com/user/show/10604145-harsh-sharma"""]))
+
+
+
+#Institute of Engineering and Technology,2011,2012,"Secured a State Rank of 1378 and thus a General Category seat in Computer Science department.  I studied in IET for the duration of one year, prepared again for the Delhi College of Engineering ( DTU ) and when I got selected in DTU - I withdrew my admission.",Bachelor's degree,
+
+
 ###########################
 # Skills Details
 ###########################
@@ -367,7 +378,7 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Co-Founder and Chief Technology Officer"), NoEscape("1 August 2015 - 1 July 2016"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+    doc.append(Command("WorkEntry",[NoEscape("Co-Founder and Chief Technology Officer"), NoEscape("1 August 2015 - 1 July 2016"), "Coursera.com", NoEscape("""I worked on our own product targeting the  StartUps' Funding problem, under the tutelage of Fourtek IT Solutions  Pvt. Ltd. Noida, India. I withdrew from the venture realizing that there is much that I have to learn and this huge responsibility would cripple my agility.""")]))
 
 
 
