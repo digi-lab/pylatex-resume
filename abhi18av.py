@@ -25,6 +25,9 @@ class SkillsEntry(CommandBase):
 class EducationEntry(CommandBase):
     _latex_name = 'EducationEntry'
 
+class ProjectsEntry(CommandBase):
+    _latex_name = "ProjectsEntry"
+
 class WorkEntry(CommandBase):
     _latex_name = 'WorkEntry'
 
@@ -222,6 +225,20 @@ if __name__ == '__main__':
  """)
 
     doc.append(PublicationsEntry)
+###########################
+
+###########################
+
+
+    ProjectsEntry = UnsafeCommand('newcommand', r'\ProjectsEntry', options=2,
+                             extra_arguments=r"""
+         % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Title
+        \noindent\hangindent=2em\hangafter=0 \small #2 % Description
+        \normalsize \par
+ """)
+
+    doc.append(ProjectsEntry)
 
 
 ###########################
@@ -299,7 +316,7 @@ if __name__ == '__main__':
     doc.append(Command("EducationEntry", [ "B.Tech (Computer Science Department, specialization in IT)",
                                        NoEscape("2012-2016"),
                                        "Delhi Technological University (formerly Delhi College of Engineering)",
-                                       """I secured an All India Rank of 9000 out of 1.2 million students and cleared the cut-off for the prestigious Computer Science department. In addition to the Degree curicullum, I read and reviewed about 200 books on  - Literature - Philosophy - Fiction  All the reviews can be read on my Goodreads.com profile https://www.goodreads.com/user/show/10604145-harsh-sharma"""]))
+                                       """I secured an All India Rank of 9000 out of 1.2 million students and cleared the cut-off for the prestigious Computer Science department. In addition to the Degree curicullum, I read and reviewed about 200 books on  - Literature - Philosophy - Fiction  All the reviews can be read on my Goodreads.com profile abhi18av"""]))
 
 
 
@@ -362,7 +379,7 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Software Engineer - Machine Learning"), NoEscape("August 2016 - July 2017"), "Fourtek (IT) Solutions Pvt. Ltd.", """I worked as a co-founder of a product targeting the StartUp ecosystem."""]))
+    doc.append(Command("WorkEntry",[NoEscape("Software Engineer - Machine Learning"), NoEscape("August 2017 - December 2018"), "Fourtek (IT) Solutions Pvt. Ltd.", """Worked on the Database Sys-Admin"""]))
 
     doc.append(Command('sepspace'))
 
@@ -374,12 +391,14 @@ if __name__ == '__main__':
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Student"), NoEscape("1 August 2016 - 1 August 2017"), "Coursera.com", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
+    doc.append(Command("WorkEntry",[NoEscape("Educational Sabbatical"), NoEscape("1 August 2016 - 1 August 2017"), "Online Education Platforms", """I took a sabbatical following my stint with Peoplemetrix Pvt. Ltd. and I was laser focused on gaining knowledge.  This resulted in scholarships and certifications which are enlisted in the achievements section."""]))
 
     doc.append(Command('sepspace'))
 
-    doc.append(Command("WorkEntry",[NoEscape("Co-Founder and Chief Technology Officer"), NoEscape("1 August 2015 - 1 July 2016"), "Coursera.com", NoEscape("""I worked on our own product targeting the  StartUps' Funding problem, under the tutelage of Fourtek IT Solutions  Pvt. Ltd. Noida, India. I withdrew from the venture realizing that there is much that I have to learn and this huge responsibility would cripple my agility.""")]))
+    doc.append(Command("WorkEntry",[NoEscape("Co-Founder and Chief Technology Officer"), NoEscape("1 August 2015 - 1 July 2016"), "Peoplemetrix Pvt. Ltd.", NoEscape("""I worked on our own product targeting the  StartUps' Funding problem, under the tutelage of Fourtek IT Solutions  Pvt. Ltd. Noida, India.""")]))
 
+
+# TODO Add Internships
 
 
 ###########################
