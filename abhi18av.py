@@ -57,18 +57,22 @@ if __name__ == '__main__':
 
 
 
-    doc.preamble.append(Command("usepackage", "mdframed"))
-    doc.preamble.append(Command("usepackage", "babel","english"))
-#    doc.preamble.append(Command("usepackage", "inputenc","utf8x"))
-    doc.preamble.append(Command("usepackage","microtype", ["protrusion=true" , "expansion=true"]))
-    doc.preamble.append(Command("usepackage", "amsmath"))
-    doc.preamble.append(Command("usepackage", "amsfonts"))
-    doc.preamble.append(Command("usepackage", "amsthm"))
-    doc.preamble.append(Command("usepackage", "graphicx"))
-    doc.preamble.append(Command("usepackage", "xcolor", "svgnames"))
-    doc.preamble.append(Command("usepackage", "geometry"))
-    doc.preamble.append(Command("usepackage", "url"))
-    doc.preamble.append(Command("usepackage", "sectsty"))
+#     doc.preamble.append(Command("usepackage", "mdframed"))
+#     doc.preamble.append(Command("usepackage", "babel","english"))
+# #    doc.preamble.append(Command("usepackage", "inputenc","utf8x"))
+#     doc.preamble.append(Command("usepackage","microtype", ["protrusion=true" , "expansion=true"]))
+#     doc.preamble.append(Command("usepackage", "amsmath"))
+#     doc.preamble.append(Command("usepackage", "amsfonts"))
+#     doc.preamble.append(Command("usepackage", "amsthm"))
+#     doc.preamble.append(Command("usepackage", "graphicx"))
+#     doc.preamble.append(Command("usepackage", "xcolor", "svgnames"))
+#     doc.preamble.append(Command("usepackage", "geometry"))
+#     doc.preamble.append(Command("usepackage", "url"))
+#     doc.preamble.append(Command("usepackage", "sectsty"))
+
+
+
+    doc.preamble.append(Command("input", "style"))
 
 
     doc.append(Command('frenchspacing'))
