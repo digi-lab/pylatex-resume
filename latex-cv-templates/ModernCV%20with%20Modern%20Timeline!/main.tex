@@ -1,0 +1,415 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Maria Luiza Linhares Dantas
+% 
+% This is an example of a very complete CV using the 'moderncv' package
+% and the 'timeline' package. For more information on those, please
+% access: 
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper, sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue} 
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}    % Width of the entire CV
+\setlength{\hintscolumnwidth}{4.1cm} % Width of the timeline on your left
+\usepackage{pdfpages/pdfpages}
+\usepackage{moderntimeline/moderntimeline}
+\usepackage{xpatch/xpatch}
+\usepackage{color, graphicx}
+\tlmaxdates{2007}{2016}              % Beggining and start of your timeline                        
+
+\newcommand{\cvreferencecolumn}[2]{%
+  \cvitem[0.8em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[8]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
+
+% List of journals that I may need to use in the bibtex file 
+\def\aj{AJ}
+\def\araa{ARA\&A}
+\def\apj{ApJ}
+\def\apjl{ApJ}
+\def\apjs{ApJS}
+\def\apss{Ap\&SS}
+\def\aap{A\&A}
+\def\aapr{A\&A~Rev.}
+\def\aaps{A\&AS}
+\def\mnras{MNRAS}
+\def\pasp{PASP}
+\def\pasj{PASJ}
+\def\qjras{QJRAS}
+\def\nat{Nature}
+\def\aplett{Astrophys.~Lett.}
+\def\aas{AAS}
+\def\solphys{Solar Physics}
+\def\memsai{Mem.~Soc.~Astron.~Italiana}
+
+
+% Personal Information
+\name{Maria Luiza \newline}{Linhares Dantas}
+\title{\emph{Curriculum Vitae}}                              
+\address{University of Sao Paulo \\ Institute of Astronomy, Geophysics, \\ and Atmospheric Sciences\\ Rua do Matao 1226 - Office B-308 \\ CEP: 05508-090, }{São Paulo - SP, Brazil}{}
+\phone[mobile]{+55~(11)~9~9683~6419}                   
+\phone[fixed]{+55~(11)~3091~2722}
+\email{maria.luiza.dantas@usp.br}                % optional, remove / comment the line if not wanted
+\homepage{mdastro.wix.com/maria-luiza-dantas}    % optional, remove / comment the line if not wanted
+%\social[linkedin]{https://br.linkedin.com/in/maria-luiza-linhares-dantas-56408033}  % optional, remove / comment the line if not wanted     
+\social[twitter]{mdastro}  % optional, remove / comment the line if not wanted
+\social[github]{mdastro}   % optional, remove / comment the line if not wanted           
+\extrainfo{\emailsymbol \emaillink{mdantas.astro@gmail.com}}
+\quote{Dubitando ad veritatem parvenimus - \emph{Cicerone}}                       
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+
+\begin{document}
+
+\makecvtitle
+
+\section{Educational Background}
+
+\bigskip
+
+\tlcventry{2015}{0}{PhD Extragalactic Astrophysics}{Institute of Astronomy, Geophysics, and Atmospheric Sciences - University of São Palo \emph{(hereafter IAG-USP)}}{}{São Paulo, Brazil}{}
+
+\bigskip
+
+\tlcventry{2013}{2015}{MSc Extragalactic Astrophysics}{IAG-USP}{}{São Paulo, Brazil}{}
+
+\bigskip
+
+\tlcventry{2007}{2011}{BSc Physics}{Institute of Physics - University of S\~ao Paulo \emph{(hereafter IF-USP)}}{São Paulo, Brazil}{}{Major in Astrophysics}
+
+\bigskip
+
+\section{Theses}
+
+\medskip
+
+\subsection{\textbf{PhD Thesis}}
+
+\cvitem{\textbf{TITLE}}{The UV Emission in Early-Type Galaxies: A Modern Approach}
+\cvitem{\textbf{ADVISOR}}{Professor Paula R. T. Coelho.}
+\cvitem{\textbf{FUNDING AGENGY}}{Coordenação de Aperfeiçoamento de Pessoal de Nível Superior \newline (hereafter CAPES)}
+
+\bigskip
+
+\subsection{\textbf{MSc Thesis}}
+
+\cvitem{\textbf{TITLE}}{The Relation Between the Spectral Synthesis of Galaxies in the Optical Region and Their UV Emission}
+\cvitem{\textbf{ADVISOR}}{Professor Laerte Sodr\'e Jr.}
+\cvitem{\textbf{FUNDING AGENGY}}{CAPES}
+
+\bigskip
+
+\subsection{\textbf{BSc Thesis}}
+
+\cvitem{\textbf{TITLE}}{Infrared Photometry of Young Star Clusters}
+\cvitem{\textbf{ADVISORS}}{Professors Jacques Lépine \& Roberto Ortiz}
+
+\bigskip
+
+\section{Research Projects}
+
+\medskip
+
+\subsection{\textbf{Undergraduate Research Project}}
+
+\tlcventry{2007}{2009}{The Study of the HII Region G331.5-0.2 in the Radio Contiuum Through the Stellar Population Using the 2MASS Catalog}{}{}{}{}
+
+\cvitem{\textbf{ADVISOR}}{Professor Zulema Abraham}
+\cvitem{\textbf{FUNDING AGENGY}}{Conselho Nacional de Desenvolvimento Científico e Tecnológico \newline (hereafter CNPq)}
+
+\bigskip
+
+\section{Research Interests}
+
+\cvitem{\textbf{\footnotesize{EXTRAGALACTIC ASTROPHYSICS}}}{    
+    \begin{itemize}
+    \item Galaxy Evolution
+    \item Spectral Synthesis Models
+    \item Chemical Evolution of the Universe
+    \item UV Astrophysics
+    \end{itemize}
+    }
+
+\cvitem{\textbf{OTHERS}}{
+    \begin{itemize}
+    \item Astrostatistics
+    \end{itemize}
+    }
+
+
+\section{Affiliations}
+\subsection{Scientific}
+
+\cvitem{\textbf{\footnotesize{BRAZIL}}}{Sociedade Astronômica Brasileira (hereafter \textbf{SAB}) \emph{(Brazilian Astronomical Society)} }
+
+\cvitem{\textbf{\footnotesize{INTERNATIONAL ASSOCIATIONS}}}{International Astrostatistics Association (\textbf{IAA}), Cosmostatistics Initiative (\textbf{COIN}), Javalambre Physics of the Accelerating Universe (\textbf{J-PAS})}
+
+\subsection{Other}
+\cvitem{}{Overleaf Advisor (\url{https://www.overleaf.com/advisors})}
+\cvitem{}{Zero Waste Bloggers Network, Inc. (non-profit organization) \newline (\url{http://zerowastebloggersnetwork.com})}
+
+\section{Teaching Experience}
+
+\medskip
+
+\subsection{Teaching Assistant}
+
+\tldatecventry{2014}{Galactic and Extragalactic Astrophysics}{IAG-USP}{São Paulo}{Brazil}{SUPERVISOR Professor Ronaldo Eustáquio de Souza}
+\cvitem{\textbf{FUNDING AGENCY}}{IAG-USP}
+
+\bigskip
+
+\tldatecventry{2014}{Topics on Astronomy to Undegraduate Students with Major in Pedagogy}{IAG-USP}{São Paulo}{Brazil}{SUPERVISOR Professor Nelson Vani Leister}
+\cvitem{\textbf{FUNDING AGENCY}}{IAG-USP}
+
+\tldatecventry{2010}{Topics on Astronomy to Geophysicists}{IAG-USP}{São Paulo}{Brazil}{SUPERVISOR Professor Enos Picazzio} \cvitem{\textbf{FUNDING AGENCY}}{None (volunteer tutoring)}
+
+\bigskip
+
+\tldatecventry{2010}{Position Astronomy}{IAG-USP}{São Paulo}{Brazil}{SUPERVISOR Professor Ramachrisna Teixeira}
+\cvitem{\textbf{FUNDING AGENCY}}{IAG-USP}
+
+\bigskip
+
+\tldatecventry{2009}{Introduction to Astronomy}{IAG-USP}{São Paulo}{Brazil}{SUPERVISOR Professor Vera Jatenco Pereira}
+\cvitem{\textbf{FUNDING AGENCY}}{IAG-USP}
+
+\bigskip
+
+
+\subsection{Outreach Projects}
+\tlcventry{2010}{2011}{Astronomia Para Todos \emph{(Astronomy for Everybody)}}{\newline IAG-USP}{São Paulo}{Brazil}{}
+
+\cvitem{\textbf{SUPERVISOR}}{Professor Enos Picazzio}
+
+\cvitem{\textbf{DESCRIPTION}}{This project had as main goal to develop a book and a website in order to update and spread Astronomy topics to school teachers}
+
+\cvitem{{\textbf{FUNDING AGENCY}}}{CNPq}
+
+\bigskip
+
+\subsection{Private Teaching}
+
+\tlcventry{2007}{0}{Physics \& Mathematics}{}{}{}{Sporadic private teaching to school students (children and adolescents)}
+
+\bigskip
+
+\section{Languages}
+\cvitemwithcomment{Portuguese}{Native}{}
+
+\medskip
+
+\cvitemwithcomment{English}{Fluent}{Certificate of Proficiency in English \\ \emph{University of Michigan}}
+
+\medskip
+
+\cvitemwithcomment{French}{Fluent}{Diplôme Approfondi de Langue Française \emph{(DALF)} \\ \emph{Centre International d’Études Pédagogiques}}
+
+\medskip
+
+\cvitemwithcomment{Spanish}{Basic Fluency}{Good Understanding, Medium Speaking, Basic Writing}
+
+\medskip
+
+\cvitemwithcomment{German}{Basic Fluency}{Good Understanding, Medium Speaking, Basic Writing}
+
+\bigskip
+
+\section{Skills}
+
+\cvitemwithcomment{Programming}{Python, R, SQL Databases, \LaTeX}{}
+
+\medskip
+
+\cvitemwithcomment{Tools}{GitHub, PyCharm, BitBucket}{Program Version Control and Program Repositories.}
+
+\medskip
+
+\cvitemwithcomment{Other Skills}{Communication, Organization, Writing, Translation}{}
+
+\bigskip
+
+\section{Participation In Events}
+
+\tldatecventry{2015}{XVII Advanced School on Astrophysics}{}{Campos do Jordão}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2015}{Second COIN Residence Program}{}{Cowes, Isle of Wight}{United Kingdom}{}
+
+\bigskip
+
+\tldatecventry{2015}{First Python Boot Camp}{IAG-USP}{São Paulo}{Brazil}{Local Organizing Committee Member \& Scientific Organizing Committee Member \newline \textbf{TALKS} Handling Data \& Data Visualization}
+
+\bigskip
+
+\tldatecventry{2015}{Second Brazilian J-PAS/A-PLUS Meeting}{IAG-USP}{São Paulo}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2014}{XIX Special Courses Cycle}{National Observatory}{Rio de Janeiro}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2014}{XXXVIII Brazilian Astronomical Society Meeting}{}{B\'uzios}{Brazil}{\textbf{POSTER TITLE} The Relation Between the Spectral Synthesis of Galaxies in the Optical and Their UV Emission}
+
+\bigskip
+
+\tldatecventry{2013}{XIV Latin American Regional IAU Meeting}{}{Florian\'opolis}{Brazil}{\textbf{POSTER TITLE} The Relation Between the Spectral Synthesis of Galaxies in the Optical and Their UV Emission}
+
+\bigskip
+
+\tldatecventry{2013}{I First Winter School of the Valongo Observatory}{}{Rio de Janeiro}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2013}{USP Conference on Cosmology}{University of S\~ao Paulo}{S\~ao Paulo}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2012}{XVI Advanced School on Astrophysics}{}{Itatiba}{Brazil}{} 
+
+\bigskip
+
+\tldatecventry{2012}{I BRAVO VO School}{}{S\~ao Paulo}{Brazil}{}
+
+\bigskip
+
+\tldatecventry{2009}{XXVII IAU General Meeting}{}{Rio de Janeiro}{Brazil}{Participation as a volunteer undergraduate student.}
+
+\bigskip
+
+\tldatecventry{2009}{XIV Undergraduate Research Symposium}{IAG-USP}{S\~ao Paulo}{Brazil}{\textbf{POSTER TITLE} The Study of the HII Region G331.5-0.2 in the Radio Contiuum Through the Stellar Population Using the 2MASS Catalog} 
+
+\bigskip
+
+\section{Event Organization}
+
+\tldatecventry{2015}{$1^{st}$ Python Boot Camp}{IAG-USP}{São Paulo}{Brazil}{Member of the Local Organizing Committee and the Scientific Organizing Committee \\ For more information, please access the website:\\  \url{http://www.astro.iag.usp.br/~pythonbootcamp}.}
+
+\bigskip
+
+\tlcventry{2013}{0}{Journal Club}{IAG-USP}{S\~ao Paulo}{Brazil}{Journal Club is an initiative focused on sharing new and interesting publications and important information among graduate students and post-doctoral fellows - although, all members of the department are welcome to participate, whether as lecturers or as audience.
+\\
+\textbf{The main goals of Journal Club are:}
+\begin{itemize}
+\item To provide a friendly environment in which everyone can improve their presentation skills;
+\item To spread the newest and most important publications in all fields of Astrophysics and correlated areas among the target audience, in order to keep everyone updated in terms of research;
+\item To share important information and guidance about general issues regarding academia (e.g. "How to prepare for a talk?", "How to write a paper", etc.).
+\end{itemize}
+\medskip
+For more information, please access our website:\\ \url{http://www.astro.iag.usp.br/~journalclub/}}
+
+\bigskip
+
+\section{Other Professional Experiences}
+
+\tlcventry{2012}{0}{Freelance Translator at Gengo}{English-Portuguese}{}{see: \url{gengo.com}}{Translated for several clients such as: Airbnb, TripAdvisor, Buzzfeed, Aliexpress, among others.}
+
+\medskip
+
+\tldatecventry{2015}{Development of Physics Courseware Material}{Edições SM}{São Paulo}{Brazil}{Developed Physics texts, exercises, and teacher's manual to be published in Middle School books.}
+
+\medskip
+
+\tldatecventry{2015}{Development of Physics Courseware Material}{Oxford University Press}{São Paulo}{Brazil}{Developed Physics texts, exercises, and teacher's manual to be published in High School books.}
+
+\medskip
+
+\tldatecventry{2012}{Substitute Teacher}{Fundação Bradesco}{São Paulo}{Brazil}{Acted sporadically as a substitute teacher at Fundação Bradesco for High School level students.}
+
+\medskip
+
+\tldatecventry{2012}{Project Analyst}{Luz Engenharia Financeira}{S\~ao Paulo}{Brazil}{Implemented Risk Software for Customers - e.g. Banks and other financial institutions.}
+
+\medskip
+
+\tldatecventry{2011}{Trainee in Finance}{Luz Engenharia Financeira}{S\~ao Paulo}{Brazil}{Implemented Risk Software for Customers - e.g. Banks and other financial institutions.}
+
+\medskip
+
+\tlcventry{2010}{2011}{Computer Laboratory Tutor}{IF-USP}{São Paulo}{Brazil}{Provided guidance to undergraduate students and controlled the use of the computers}
+\cvitem{\textbf{FUNDING AGENCY}}{IF-USP}
+
+\bigskip
+
+\section{Other Certificates}
+
+\cvitem{\textbf{Programming}}{\emph{The Data Scientist’s Toolbox} \newline Johns Hopkins Bloomberg School of Public Health \& Coursera \newline \textbf{With Distinction}}
+
+\bigskip
+
+\cvitem{\textbf{English}}{\emph{Certificate of Proficiency in English} \newline University of Michigan}
+
+\bigskip
+
+\cvitem{\textbf{French}}{\emph{Diplôme Approfondi de Langue Française} (DALF) \newline Centre International d’Études Pédagogiques}
+
+\cvitem{}{\emph{Diplôme d'Études Françaises ($2^{ème}$ degré)} \newline Université Nancy 2}
+
+\cvitem{}{\emph{Certificat Pratique de Langue Française ($1^{er}$ degré)} \newline Université Nancy 2}
+
+\bigskip
+
+\cvitem{\textbf{Finance}}{\emph{Aprenda a Investir na Bolsa de Valores \newline (Learn How to Invest in the Stock Market)} \newline XP Educação}
+
+\cvitem{}{\emph{Mercado de Ações: Conceitos e Definições \newline (Stock Market: Concepts and Definitions)} \newline Bolsa de Valores de São Paulo (hereafter BM\&F Bovespa)}
+
+\cvitem{}{\emph{Mercados Futuros: Conceitos e Definições \newline (Future Markets: Concepts and Definitions)} \newline BM\&F Bovespa}
+
+\cvitem{}{\emph{Matemática Financeira: Tópicos em Finanças \newline (Financial Mathematics: Topics on Finance)} \newline BM\&F Bovespa}
+
+\cvitem{}{\emph{Mercado de Opções: Conceitos e Definições \newline (Options Market: Concepts and Definitions)} \newline BM\&F Bovespa}
+
+\cvitem{}{\emph{Mercado de Swaps \newline (Swap Market)} \newline BM\&F Bovespa}
+
+\bigskip
+
+\cvitem{\textbf{Others}}{\emph{Learning How to Learn: Powerful Mental Tools to Help You Master Tough Subjects} \newline University of California, San Diego (UC San Diego) \& Coursera  \newline \textbf{With Distinction}}
+
+\bigskip
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{publications}
+
+\section{Invited Talks}
+
+\tldatecventry{2016}{Is the cluster environment quenching the Seyfert activity in elliptical and spiral galaxies?}{Extragalactic Group Seminar}{IAG-USP}{S\~ao Paulo, Brazil}{}
+
+\medskip
+
+\tldatecventry{2015}{Astrostatistics: An Arising Field in Astrophysics}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
+
+\medskip
+
+\tldatecventry{2013}{An Empirical Connection Between the UV Color of Early Type Galaxies and the Stellar Initial Mass Function}{Journal Club}{IAG-USP}{S\~ao Paulo, Brazil}{}
+
+\section{References}
+
+\begin{cvcolumns}
+    \cvcolumn{Paula R. T. Coelho}{Professor \\ Astronomy Dept., IAG-USP \\ São Paulo, Brazil \\ \emailsymbol pcoelho@usp.br \\ \phonesymbol +55 11 3091 2727}
+    \cvcolumn{Rafael S. de Souza}{Post-Doctoral Researcher \\ Eötvös Loránd University \\ Budapest - Hungary \\ \emailsymbol rafael@caesar.elte.hu }
+\end{cvcolumns}
+
+
+\clearpage
+
+
+\end{document}

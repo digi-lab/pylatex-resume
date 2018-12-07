@@ -1,0 +1,169 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Isaiah}{Becker-Mayer}
+\title{Physics}                               % optional, remove / comment the line if not wanted
+\address{2432 West Broadway}{Vancouver}{BC}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{778 885 4459}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{ibeckermayer@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.myname.webs.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\small{Undergraduate UBC student completing a physics major with a biology minor. Passionate about science, philosophy and engineering with strong interpersonal skills and autodidactic tendencies.}
+
+\section{Previous Employment}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{July 2010--Aug 2011}{Youth Soccer Coach/Assistant}{Lamorinda Soccer Club}{Lafayette}{CA}{\vspace{3pt}I was a coach for my local soccer club during various winter and summer technical skills clinics. I ran various drills for players aged 6-13 in an effort to promote stronger ball skills for the youngest players in a highly competitive club. This early experience taught me patience through the difficulties faced when working with young children. I also learned to display professionalism and hold myself accountable to my responsibilities as a coach due to the intense personality of my boss. }}
+
+\vspace{6pt}
+
+\item{\cventry{Summer 2010 and 2011}{Babysitter}{Babysitting}{San Francisco}{}{\vspace{3pt}I worked as a babysitter for a couple in San Francisco. I took care of a highly energetic 6 year old named Dylan and occasionally some of his friends. The job mostly involved bringing the kids to local parks and playing soccer with them in order to wear them out. I also assumed a traditional babysitter role and was tasked with looking after Dylan while his mothers went out. This job gave me a chance to practice patience in working with a 6 year old as well as responsibility in being entrusted with somebody's child. The most applicable skill I learned from this experience was time management due to the 1 hour commute time that I was forced to account for. }}
+
+\vspace{6pt}
+
+\item{\cventry{August 2014--January 2015}{Dishwasher/Line Cook}{Koerner's Pub}{UBC Campus}{}{\vspace{3pt}I worked as a dishwasher and then was promoted to line cook at a local restaurant/pub. I was responsible for cleaning all the dishes and maintaining a cleanly dishroom and then for preparing food orders and maintaining a cleanly kitchen. This job experience taught me the importance of separating my personal life from my professional duties, due to the nature of my relationship with my supervisor. It also reinforced the values of hard work and time management as I navigated the fine balance of work, play, and studying.}}
+
+\end{itemize}
+
+\section{Education}
+
+\vspace{5pt}
+
+\subsection{Academic Qualifications}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{2013--present}{Undergraduate:}{University of British Columbia}{Vancouver, BC}{\textit{Physics Major Biology Minor}}{}}
+
+\item{\cventry{2012--2013}{Awards:}{Summit Preparatory School}{Kalispell, MT}{\textit{2 x Overall Academic Achievement, 1 x History Achievement }}{}}  % arguments 3 to 6 can be left empty
+
+\item{\cventry{2009--2011}{}{Campolindo High School}{Moraga, CA}{\textit{}}{}}  % arguments 3 to 6 can be left empty
+
+\end{itemize}
+
+\vspace{2pt}
+
+\section{Technical and Personal skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Basic ability with: TeX
+
+\vspace{6pt}
+
+\item \textbf{Industry Software Skills:} Most MS Office products including MS powerpoint and MS excel
+
+\vspace{6pt}
+
+\item \textbf{General Business Skills:} Good interpersonal skills, works well in a team. Willing to take the lead but respects authority when appropriate.
+
+\vspace{6pt}
+
+\item \textbf{Other:} Physically in good shape, communicates well through writing and face to face interaction, practices assertive communication
+
+\end{itemize}
+
+\section{Interests and extra-curricular activity}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{I was the captain of our school's soccer team at Summit Preparatory School. We came in 3rd place in our futsal (indoor soccer) league and I was the leading scorer. }
+
+\vspace{6pt}
+
+\item{I completed a 2 month Wilderness Program in the four corners region of Utah. I spent 9 weeks in a group hiking through the Utah back country, preparing our own food and shelter, and surviving a cold, snowy winter. The experience nurtured my leadership skills and introduced me to my love for hiking and nature}
+
+\vspace{6pt}
+
+\item{I am an avid hiker and aspiring mountaineer (member of the UBC Varsity Outdoors Club). Other interests include Crossfit (Crossfit West10) and meditation.}
+
+\end{itemize}
+
+\section{References}
+
+\vspace{6pt}
+ 
+\begin{itemize}
+
+\item{Up to 3 references available on request}
+
+\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.

@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=.85]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Richard} % Your first name
+\familyname{House} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Address}{City, State Zip}
+\mobile{(XXX) XXX-XXXX}
+\email{XXXX@XXXXX.com}
+\homepage{https://www.linkedin.com} {https://www.linkedin.com} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\extrainfo{DOB: Month Day, Year}
+\photo[70pt][0.4pt]{pictures/House} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2014--2016}{University of California, Berkeley}{Bachelors of Science}{}{\textit{Mechanical Engineering}}{}
+
+\cventry{2010--2014}{College of San Mateo}{Transferred}{}{\textit{Mechanical Engineering}}{}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+
+\cventry{April 2015 --
+April 2017}{Certified LabVIEW Associate Developer}{\textsc{National Instruments}}{}{}{}
+
+%----------------------------------------------------------------------------------------
+%	Skills SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills \& Abilities}
+
+\cvitem{Programming Languages}{\textsc{LabVIEW, MATLAB}}
+\cvitem{CAD}{\textsc{SOLIDWORKS}}
+\cvitem{Software }{\textsc{LaTeX, MS Word, MS Excel}}
+
+%----------------------------------------------------------------------------------------
+%	Masters SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Masters Thesis}
+
+%\cvitem{Title}{\emph{Technologies and characterization of ferroelectric polymers for biomedical sensors}}
+%\cvitem{Supervisors}{Professor Antonino Fiorillo}
+%\cvitem{Description}{This thesis is based on the implementation of a temperature sensor.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+
+
+\cventry{Aug 2015 --
+Dec 2015}{CNC Pancake Printing Machine}{\textsc{Mechatronics Design}}{}{}{Wrote LabVIEW code to aquire images of people's faces from a USB camera and perform image processing.  Used MATLAB to convert the processed image to g-code. An Arduino Uno was acting as a CNC controller.  Pancake batter was printed on an electric griddle and color shading was achieved by varying the cooking time.}
+
+
+\cventry{Aug 2015 --
+Dec 2015}{IC Engine Performance Analysis}{\textsc{Mechanical Engineering Laboratory}}{}{}{Determined the change in performance of a turbo-charged 4-cylinder engine as a result of lowering the fuel temperature prior to injection into the cylinders.  Thermocouple and exhaust data was collected using LabVIEW and a dynamometer was used to collect power and torque output readings.}
+
+\cventry{Jan 2015 --
+May 2015}{Autonomous Quadrotor}{\textsc{Design of Microprocessor-Based Mechanical Systems}}{}{}{Interfaced a quadrotor with a National Instruments MyRIO, a video camerao, and ultra-sonic sensors.  Wrote a LabVIEW VI that did image processing and controlled the movement of the quadrotor using a PID controller.  The quadrotor was able to track a colored target and follow it.}
+
+\cventry{Aug 2013 --
+Dec 2013}{Fishing Simulation}{\textsc{MATLAB Programming}}{}{}{Wrote MATLAB code to create a basic fishing game using a 3-D matrix and a graphical user interface.  Created an algorithm to set fish population, the probability of successfully catching a fish, and to control fish movement within the river.}
+%------------------------------------------------
+
+\section{Work Experience}
+
+\cventry{Dec 2015 --
+Present}{Assistant Engineer}{\textsc{Integrated Motions, Inc}}{Berkeley}{Ca}{Contracted with ChemiSense to characterize and calibrate proprietary air quality sensors.  }
+
+\cventry{June 2015 --
+Present}{Undergraduate Researcher}{\href{http://best.berkeley.edu/best-research/best-berkeley-emergent-space-tensegrities-robotics/}{\textsc{UC Berkeley Emergent Space Tensegrities Lab}}}{}{}{Collaborating in the design, manufacturing, and assembling of a tensegrity robot.  Designed and manufactured an apparatus to test the friction in the end caps.  Helped design new end caps that reduced friction.  Working to create a 3-D model that mimics the orientation of the robot using sensor readings.}
+
+\cventry{June 2015 --
+Dec 2015}{Independent Contractor}{\textsc{California Department of Public Health}}{Richmond}{Ca}{Used wet and dry air to regulate the relative humidity in an environmental chamber.  Designed and implemented a closed-loop controller in LabVIEW.  Setup a Data Acquisition Module (DAQ) to take sensor readings and manage multiple mass flow controllers.}
+
+\cventry{March 2007 --
+June 2012}{Transportation Security Officer}{\textsc{Covenant Aviation Security, LLC}}{San Francisco}{Ca}{Thoroughly screened passengers using a variety of new technology to protect all passengers while maintaining a high level of professionalism with excellent customer service.  Promoted as a recruitment team member to lead the hiring process.  This included reviewing resumes, conducting interview, and helping new hires with the on-boarding process.  Successfully completed a Professional Development program aimed at developing managerial skills.}
+
+\cventry{Aug 2006 --
+March 2007}{Leasing Agent}{\textsc{Braddock and Logan Services, LLC}}{Danville}{Ca}{Provided superior customer service and communication to high-end residents and prospects.  Maximized customer satisfaction and increased renewals, revenue, reputation and profitability.  Assisted in maintenance, lease administration, eviction, vacancy anticipation, collection, marking, lease renewals and audits.  Prepared weekly and monthly rental statistic reports and market rent surveys.}
+
+\cventry{Oct 2005 --
+Aug 2006}{Tire Installer}{\textsc{Costco Wholesale}}{Livermore}{Ca}{Drove customer vehicles into/out of installation bay and raised vehicles using a hydraulic lift.  Mounted and dismounted tires from the rims and balanced them using a balancing machine.  Assisted members in determining the correct tires needed for their vehicle.  Ensured tires were properly inflated and lug nuts were properly tightened.  Repaired flat tires.}
+
+\cventry{Aug 2005 --
+Oct 2005}{Front Desk Receptionist}{\textsc{24 Hour Fitness}}{Fremont}{Ca}{Greeted all incoming members and guests and directed them appropriately.  Operated a cash register and sold merchandise to members.  Maintained logs of maintenance requests and member concerns.  Performed general cleaning duties.}
+
+\cventry{Feb 2004 --
+Aug 2005}{Desktop Support Technician}{\textsc{CafePress.com}}{Foster City}{Ca}{Supported two locations with 200+ employees.  Diagnosed hardware and software issues and handled new equipment roll-out.  Prepared reports for hardware and software auditing and also license and asset tracking.  Administrated the mail server, phone system, alarm system, and building access.}
+
+\cventry{Nov 2003 --
+Feb 2004}{Seasonal Sales Associate}{\textsc{Macy's}}{Concord}{Ca}{Provided excellent customer service throughout the transaction process.  Provided assistance in the selection of merchandise to purchase.  Continually met personal sales goals and member reward card enrollment goals.  Processed returns courteously and professionally.}
+
+\cventry{June 2003 --
+Aug 2003 \& June 2002 -- Jan 2003}{IT Technician}{\textsc{Eskanos and Adler, Lawfirm Collections Agency}}{Concord}{Ca}{Provided IT support for 140+ users and was the primary contact for the call center employees.  Troubleshot computer and network issues as well as software and hardware upgrades.  Built new hire workstations.  Created an inventory of computer assets and a method for tracking new and retired computer parts.}
+
+
+%----------------------------------------------------------------------------------------
+%	Coursework SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Coursework}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Thermodynamics}{Heat Transfer}
+\cvlistdoubleitem{Combustion Processes}{Fluid Mechanics}
+\cvlistdoubleitem{Introduction to Mechanical Systems for Mechatronics}{Design of Microprocessor Based Mechanical Systems}
+\cvlistdoubleitem{Mechanical Engineering Laboratory}{Introduction to Solid Mechanics}
+\cvlistdoubleitem{Mechanical Behavior of Engineering Materials}{Dynamic Systems and Feedback Control}
+\cvlistdoubleitem{Mechatronics Design}{Feedback Control Systems}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Communication Skills}
+
+%\cvitem{2010}{Oral Presentation at the California Business Conference}
+%\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Native Speaker}{}
+%\cvitemwithcomment{Spanish}{Basic}{}
+%\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{Interests}
+
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+% \cvlistdoubleitem{Piano}{}
+% \cvlistitem{Baseball}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
+
+

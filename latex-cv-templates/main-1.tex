@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%Version for spanish users, by dgarhdez
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{5cm}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\noindent\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Nombre Apellido Apellido}
+\MySlogan{Nombre de tu carrera}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Datos personales}{}
+
+\PersonalEntry{Nacimiento}{11 de diciembre, 1997}
+%\PersonalEntry{Address}{111 First St, New York}
+\PersonalEntry{Teléfono}{(+00) 0000-0000-0000}
+\PersonalEntry{E--Mail}{\url{mailmailmail@gmail.com}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Educación}{}
+
+\EducationEntry{Ingeniería de Lo que sea}{2001-2002}{Universidad Politécnica de Madrid}{
+\begin{itemize}
+\item{Especialidad }
+\item{Asignaturas más relevantes de carrera/especialidad}
+\item{Proyecto de fin de carrera: \emph{título del proyecto}}
+\end{itemize}
+}
+
+\sepspace
+
+\EducationEntry{Curso extracurricular}{Verano 2001}{Lugar}{Descripcion del curso, horas invertidas, habilidades ganadas}
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Experiencia laboral}{}
+
+\EducationEntry{Título trabajo 1}{Periodo}{Empresa}{
+\begin{itemize}
+\item{Función 1}
+\item{Función 2}
+\item{Función 3}
+\end{itemize}
+}
+\sepspace
+
+\EducationEntry{Título trabajo 2}{Periodo}{Empresa}{Descripción, habilidades}
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Habilidades personales}{}
+
+\SkillsEntry{Idiomas}{Español (nativo)}
+\SkillsEntry{}{Inglés (nivel).}
+\SkillsEntry{}{Francés (nivel)}
+
+\SkillsEntry{Software}{Excel, PowerPoint, ...}
+\SkillsEntry{Soft skills}{Trabajo en equipos multiculturales}
+\SkillsEntry{}{Flexibilidad y adaptación ante cambios en el proyecto}
+\SkillsEntry{}{Gran capacidad de comunicación}
+\SkillsEntry{}{Análisis y resolución de problemas}
+%\SkillsEntry{}{}
+
+
+
+
+%%% References
+%%% ------------------------------------------------------------
+%\NewPart{References}{}
+%Available upon request
+\end{document}

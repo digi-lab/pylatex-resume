@@ -1,0 +1,248 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Manisha}{Singh}{
+\location{\qquad \qquad \qquad \qquad \quad \qquad \qquad  }
+\href{mailto:manisha@kaist.ac.kr}{manisha@kaist.ac.kr} | +852 93845604
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{HKUST}
+\descript{Exchange Semester, Spring 2015}
+\location{June 2015 | Kowloon, Hong Kong \\ Cum. GPA: N/A}
+\sectionsep
+
+\subsection{KAIST,  Daejeon}
+\descript{BSc. in Electrical Engineering}
+\descript{Minor in Business and Mgmt.}
+\location{Expected June 2016 | South Korea}
+\location{ Cum. GPA: 3.13/4.3}
+\sectionsep
+
+
+\subsection{Global Indian Intl. School}
+\location{Grad. May 2012 | Singapore}
+\location{International Baccalaureate Diploma Program | 36/45} 
+\sectionsep
+\subsection{Kendriya Vidyalaya No.2}
+\location{Grad. May 2010 |  Kharagpur, India}
+\location{All India Secondary School Examination | 10/10 CGPA} 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Electrical Engineering}
+Circuit Theory \\
+Signals and Systems \\
+Digital Circuit Design  \\
+Computer Organization \\
+Programming structure \\
+Introduction to Robotics\\
+Probability and Stochastic Processes\\
+\sectionsep
+
+\subsection{Business and Management}
+Introduction to Business and management \\
+Organizational Behavior \\
+Management Information Systems\\
+Microeconomics\\
+Macroeconomics\\
+\sectionsep
+
+
+\subsection{MOOC}
+Introduction to Linux\\
+Entrepreneurship\\
+Corporate Strategy\\
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+Event Management\\
+Resource planning\\
+Public Relations\\
+Promotion\\
+\sectionsep
+
+
+\subsection{CO-CURRICULAR ACTIVITIES}
+Debating\\
+Volunteering\\
+Soccer\\
+Long Distance Running\\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{International Experience}
+
+\runsubsection{CONFERENCES}
+\descript{| Business and Entrepreneurship}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize} 
+\item Delegate to Global Initiative Symposium (GIS) at NTU, Taiwan, 2013
+\item Represented KAIST on a cultural trip to Shanghai and Hangzhou, 2013
+\item Delegate to 7th Singapore International Model UN conference, 2011
+\item One among 80 students selected from across all over India as member of delegation to Japan, JENESYS Cultural Exchange Programme, 2010
+%\item Presented at India Innovation Growth Programme by Lockheed Martin
+%\item Underwent a one-on-one presentation skills workshop by Ms. Donna Lipman 
+\end{tightemize}
+%\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Positions of Responsibility}
+\runsubsection{KAIST Intl. Students’ Association (KISA)}
+\descript{| Head, Promotions}
+\location{2013- 2014 | Daejeon, S. Korea}
+\begin{tightemize} 
+\item Initiated and coordinated talks between the International Students Office, ISSS and local food vendors; negotiated the contract for the establishment of a “Halal” catering service. Due to start operations on campus by March, 2015
+\item Conceived and implemented the idea of course recommender webpage for the students; providing a medium of communication with seniors, peers and alumni
+\item Coordinated the "KISA Movie Nights" event and devised a mechanism in order to increase the turnover of participants through emails, flyers and SNS as well
+\item Reviewed and contributed to the Orientation Booklet for all Intl. Freshmen 
+\end{tightemize}
+%\sectionsep
+
+\runsubsection{The KAIST Herald}
+\descript{| International Reporter}
+\location{March 2013 – December 2014 | Daejeon, South Korea}
+\begin{tightemize} 
+\item Conceived Voice of the Campus :  a platform to identify issues that need prompt attention, helping students seek response from responsible authorities. Led to the first ever representation of International students in the UG student council 
+\item Highlighted issues of importance such as need for career oriented awareness in the student community. Resulted in an increase in the number of job forum and workshops organized by the Intl. Students Office and the Intl. Relations Team
+\item Devised an effective planning and distribution mechanism for strengthening readership on campus and generated significantly improved public outreach. 
+\end{tightemize}
+%\sectionsep
+
+\runsubsection{Rotary Club, Singapore }
+\descript{| Interact Club Member}
+\location{January 2011 – March 2012 | Singapore}
+\begin{tightemize} 
+\item Completed a 1- week social service trip to The Que Huong Charity Center, Ho Chi Minh city,Vietnam, undertaking the role of student coordinator.Helped raise a donation amount of 1800 Singapore Dollars for donation to the charity center 
+\item Contributed to the SINDA Read Program, an initiative for teaching kids from low income families and differently-abled children over a period of 4 months 
+\end{tightemize}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RESEARCH PROJECT}
+\runsubsection{Image inpainting}
+\descript{| Research Assistant}
+\location{ July 2014- August 2014 | KAIST}
+Completed project "Robust procurement of image data in image inpainting using an online image database" under the supervision of Prof. Yong Man Ro. Applications in obtaining lost or degraded information from images along with 2-D reconstruction.
+
+%\sectionsep
+
+
+\section{Achievements and Awards} 
+\begin{tabular}{rll}
+2015     & One among 4 UG students chosen for a Semester Exchange Program to HKUST\\ 
+2012     & Awarded a full scholarship for 4 years to pursue Undergraduate studies at KAIST\\
+2011     & Awarded the title of “Best Interactor of the Year 2011” by Rotary Club, Singapore\\ 
+2010     & One among 8 students from across India to be awarded the GIF scholarship\\
+2010     & Awarded the Amul Vidya Bhushan for securing A1’s in all subjects in the AISSE\\
+2009     & Secured an All India Rank (AIR) 581 in National Science Talent Search Examination\\  
+
+\end{tabular}
+\sectionsep\textbf{}
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}

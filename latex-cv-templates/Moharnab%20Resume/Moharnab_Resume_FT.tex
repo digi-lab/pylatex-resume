@@ -1,0 +1,118 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+
+% Set applicant's personal data for header
+\name{Moharnab Saikia}
+\address{517 Tartan Circle, Apt 21 \linebreak Raleigh, NC 27606}
+\webpage{www.moharnabsaikia.com}
+\contacts{(919) 771-3973 \linebreak msaikia@ncsu.edu}
+\github{github.com/moharnab123saikia}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+
+\begin{cvsection}{Education}
+		\begin{cvsubsection}{North Carolina State University}{Raleigh, NC}{Aug 2015 -- May 2017 (Expected)}
+			\begin{itemize}
+				\item \textbf{M.S. in Computer Science, GPA: 3.61}
+				\item \textbf{Graduate Coursework:} Design and Analysis of Algorithms, Operating Systems, Object-Oriented Design and Development, Database Management Concepts and Systems, Software Engineering, Internet Protocols, Data Intensive Computing.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Assam Engineering College}{Guwahati, India}{Aug 2009 -- May 2013}
+			\begin{itemize}
+				\item Bachelor of Engineering in Computer Science and Engineering, First Class Graduate (Honors)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Student Programmer}{NC State University, Raleigh}{May 2016 – Present}
+			%iChat AV			
+			\begin{itemize}
+            \item Tracked and fixed bugs, re-factored the code and redesigned the interface for increased efficiency and maintainability of the Research Commitment and Tracking System and the Financial Reporting web-apps(JSP and Servlet based)
+            \item Effectively integrated version control using git in all the projects which ensured easy maintainability
+			\item Proactively created a Java program to automate the creation of the Annual Reports of the Centers and Institutes which reduced manual data entry by 10 days
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Associate Software Engineer}{Accenture, India}{Jan 2014 - May 2015}	
+			\begin{itemize}
+            	\item Wrote Reports/Interfaces in SAP ABAP handling both Functional and Technical Incidents and Change Requests for the client ABInbev
+				\item Developed a batch script which helped transfer approximately 10000 user files between two SAP servers and saved around 50 man-hours  of work
+				\item Created 20 weekly and monthly KPI reports every month to help the clients analyze and optimize the delivery process
+                \item Facilitated communication as a release coordinator to ensure effective and timely delivery of changes
+			\end{itemize}
+		\end{cvsubsection}
+
+	\end{cvsection}
+
+\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item Java, C, Ruby, Python, SAP ABAP, HTML, CSS, JavaScript, MySQL, IBM DB2, MongoDB
+				\item Ruby on Rails, jQuery, Bootstrap, Node.js, AngularJS, Express.js, Ionic, Git, Eclipse, Linux
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Technical Experience}
+		\begin{cvsubsection}{Academic Projects}{}{}
+			\begin{itemize}
+				\item \textbf{RestoScrapper:} Developed a Ruby on Rails app along with a Chrome extension that shows aggregated ratings and reviews from 						Yelp, Trip Advisor and Foursquare with the help of data scraped via a Python script.
+				\item  \textbf{Metrics for Expertiza:} Designed and implemented a module to generate metrics for peer-reviews in Expertiza (an open source peer-review web application built with the Ruby on Rails framework).
+				\item  \textbf{Online Book Library:} Built a library system using Ruby on Rails and MySQL which allowed users to check out, return and suggest books and also had admins to manage the same. It also supported e-mail notifications and checkout histories.
+				\item  \textbf{University Library Management System:} Built a library management system in Java and Oracle DB with a focus on triggers and procedures which offered management of 3 types of resources – books, cameras and rooms.
+				\item  \textbf{P2P system with centralized index:} Developed a peer to peer file transfer system in Python  which helped in understanding P2P and client-server systems and build a number of fundamental skills related to TCP/IP communication.
+				\item  \textbf{Micro shell:} Implemented the micro shell command interpreter in C which has a syntax similar to UNIX C shell.
+				\item  \textbf{Thread Library:} Developed a non-pre-emptive user-level threading library in C that supported the routines Create, Yield, Join, JoinAll, Exit and also having support for semaphores.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Personal Projects}{}{}
+			\begin{itemize}
+				\item  \textbf{E-Store:} Developed a simplified online store application using the MEAN stack which utilized various RESTful APIs like Facebook for login and Stripe for credit card payments. It also supported multiple currencies via the Open Exchange Rates API.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Additional Experience and Awards}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item \textbf{IBM DB2 Academic Associate} Certification
+				\item Conducted a 3-day workshop on IBM DB2 with 73 participants (Oct 2013) at Assam Engineering College
+				\item Worked as a Programming lab assistant at Assam Engineering College, Guwahati (Aug 2013 - Oct 2013)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	
+\end{document}

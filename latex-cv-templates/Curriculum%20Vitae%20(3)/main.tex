@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[1pt,a4paper,verdana]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Mainuddin} % Your first name
+\familyname{Talukdar} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+
+\title{Curriculum Vitae}
+\address{Barkat Bhaban - 606}{Amar Ekushey Hall, University of Dhaka, Dhaka - 1000}
+\mobile{01621085096}
+\email{bit0428@iit.du.ac.bd}
+\homepage{bd.linkedin.com/pub/mainuddin-talukdar/93/1b4/a13/} {bd.linkedin.com/pub/mainuddin-talukdar/93/1b4/a13/}% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Career Objectives}
+\cvitem{}{ As a self-motivated and responsible person, I believe on one sentence, "The riskiest thing is to take no risks." So I love problem solving, taking risk, tring to be bold and explore myself at technological field. At the same time, I am looking forward to challenging and growth oriented tasks that help to prove the best of my ability in achieving the objective of the job.}
+
+\section{Education}
+
+\cventry{2012 - Present}{Bachelor of Science in Software Engineering}{University of Dhaka}{Dhaka}{\textit{CGPA -- 3.23(out of 4) upto 5th Semester}}{Expected passing year-2015}  % Arguments not required can be left empty
+
+
+\section{Technical Skill}
+
+\cvitem{Programming Language}{{C/C++}, {Java}, {C\#}, {PHP}}
+\cvitem{Scripting Language}{HTML, CSS, Java Script}
+\cvitem{Platforms/ Framework}{.NET, ASP.NET MVC - 4, Android - 4.2 (Jelly Beans) and 4.4 (KitKat), CodeIgniter - v6.1, Bootstrap - v3.2, }
+\cvitem{Game Engine} {LibGDX - v1.0}
+\cvitem{Database}{MySQL, Oracle 11G Enterprise}% * <bit0428@iit.du.ac.bd> 2014-10-21T07:54:10.585Z:
+%
+% good
+%
+\cvitem{Development Tools}{Eclipse Helios, Net-Beans, Microsoft Visual Studio 2010 and 2012, SPSS, Code Blocks 10.05, PhpStorm - v8.0.1, XAMPP 1.8.2}
+\cvitem{Tesiting Tools} {Selenium, Apache-JMeter-2.11}
+\cvitem{Version Controlling Tool}{GitHub URL - "https://github.com/qmainuddin"}
+\cvitem{Problem Solving}{UVA - 52 URL - "uhunt.felix-halim.net/id/164673", LightOJ - 37}
+\cvitem{Concepts} {Structured Programming, Object Oriented Programming, Design Pattern and Refactoring, Cloud Computing, Quality Assurance}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Selected Projects}
+\subsection{BLICA - Android based Car Game for Blinds}
+
+\cvitem{Description}{It is an Android mobile phone based Car Gaming Sotfware for Blinds. It assists a blind by suggesting via voice information so that a user can move the car left or right. I worked at this project as a group/team in our Software Project Lab - II}
+\cvitem{Technology} {Android - 4.2, LibGdx - 1.0}
+\cvitem{Role} {Requirement Analysis, Developer}
+
+\subsection{MapBook - Android Mobile App}
+
+\cvitem{Description}{Still working on this project for Therap Java Fest - 2014}
+\cvitem{Technology} {Android - 4.4, Google Map API}
+\cvitem{Role} {Designer, Developer}
+
+\subsection{Web Portal for SWAN International Ltd}
+\cvitem{Description}{Outsourcing based project for SWAN International Company and currently working on it}
+\cvitem{Technology} {PHP, CodeIgniter, Bootstrap, JS, Jquery, HTML, MySQL}
+\cvitem{Role} {Requirement Analysis, Designer, Developer}
+
+
+\subsection{Human Resource Management System (HRMS)}
+\cvitem{Description}{It is a Web based application that solves one business problem. I worked in this project as a group for perticipating in "StarUp DU Business process tool competition"}
+\cvitem{Technology} {PHP, CodeIgniter, Bootstrap, JS, Jquery, HTML, MySQL}
+\cvitem{Role}{Developer}
+
+\subsection{IIT Key Logger and Remote Viewer}
+\cvitem{Description}{Linux Kernel based program that stores Key stroke and send total file to the remote system. I worked on it as a group in our Software Project Lab - I}
+\cvitem{Technology} {C++ Linux Kernel API, C++ Socket API}
+\cvitem{Role}{Developer}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Extra-Curricular Activities and Achievements}
+
+\cvitem{2014}{Finalist at "Startup DU business process tool making competition" along with 2
+other group members}
+\cvitem{2013} {Being selected and perticipated in ACM International Collegiate Programming Contest Dhaka Regional}
+\cvitem{2013} {Took part in Quazi Azahar Ali programming contest in Bangladesh University}
+\cvitem{2013} {Participants of IUT programming contest}
+\cvitem{2013-2014} {Joining as regular basis in Codeforces online contest - "Codeforces round"}
+
+
+\section{Workshops and Seminars}
+
+\cvitem{2014}{Working in the organizer team of Dhaka University Career Club to arrange a workshop "A-Z of BCS: Pathway to a Prestigious Career"}
+
+\cvitem{2014}{Working in the Campus Partner team of Dhaka University Career Club to a seminar of "Freelance 101" sponsored by Hub Dhaka}
+
+\cvitem{2013}{Worked as a volunteer in a Seminar on Mozilla OS in IIT, Univiersity of Dhaka}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Associations}
+\subsection{Dhaka University Career Club}
+\cvitem{Designation}{Assistant to HR}
+\cvitem{Role} {Database Development and Maintenance, Interviewer}
+
+\subsection{Dhaka University IT Society}
+\cvitem{Designation}{General Member}
+\cvitem{Role} {Worked as volunteer in major programs organized by the club}
+
+
+\subsection{IIT Apps Club}
+\cvitem{Designation}{General Member}
+\cvitem{Role} {Group Collaborator}
+
+\section{References}
+
+\cvdoublecolumn{\cvreference{Dr. Kazi Muheymin-Us-Sakib}
+    {Director and Associate Professor}
+    {Institute of Information Technology}
+    {University of Dhaka}
+    {}
+    {sakib@univdhaka.edu}
+    {+8801730051232}%
+    }
+    {\cvreference{Shah Mostafa Khaled}
+    {Assistant Professor}
+    {Institute of Information Technology}
+    {University of Dhaka}
+    {}
+    {khaled@univdhaka.edu}
+    {+8801812698789}}
+    
+\end{document}
